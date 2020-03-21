@@ -1,6 +1,6 @@
 timeMultiplier = 1;                                                             // Geschwindigkeitsfaktor für ingame Zeit - Wert von 1 bedeutet 1h im Spiel == 1h in echt
 
-ambientLife = 0;                                                                // zufällig generierte Hasen, Schlangen, Schmetterlinge, etc. (0/1) - aus Performancegründen standardmäßig aus
+ambientLife = 1;                                                                // zufällig generierte Hasen, Schlangen, Schmetterlinge, etc. (0/1) - aus Performancegründen standardmäßig aus
 ambientSound = 1;                                                               // zufällig generierte Umgebungsgeräusche (0/1)
 
 sideChannel = 0;                                                                // Sidechannel aktiv (0/1) - standardmäßig aus, damit Spieler Marker immer zeussichtbar in Global setzen können
