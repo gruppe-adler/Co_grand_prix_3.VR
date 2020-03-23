@@ -32,7 +32,7 @@ if !(isServer) exitWith {
 // this is a cba hash with the group as key and a pairs array as value
 // the pairs look like this -> [_stationId, [_time1, _time2]]
 // e.g. ["gottes_finger", [430]]
-private _times = missionNamespace getVariable ["grad_grandPix_times", ([] call CBA_fnc_hashCreate)];
+private _times = missionNamespace getVariable ["grad_grandPrix_times", ([] call CBA_fnc_hashCreate)];
 
 private _groupTimes = [];
 if ([_times, _group] call CBA_fnc_hashHasKey) then {
@@ -43,6 +43,6 @@ _groupTimes = [_groupTimes, _station, [_time]] call BIS_fnc_addToPairs;
 
 _times = [_times, _group, _groupTimes] call CBA_fnc_hashSet;
 
-grad_grandPix_times = _times;
+grad_grandPrix_times = _times;
 
-publicVariable "grad_grandPix_times";
+publicVariable "grad_grandPrix_times";
