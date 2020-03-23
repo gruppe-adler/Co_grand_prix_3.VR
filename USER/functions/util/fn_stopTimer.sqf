@@ -22,7 +22,7 @@ private _time = [time, serverTime] select isMultiplayer;
 
 // get start time
 private _startTime = [
-	missionNamespace getVariable ["grad_gradPrix_timers", []],  // array
+	missionNamespace getVariable ["grad_grandPrix_timers", []],  // array
 	_id,  // key
 	0  // default value
 ] call BIS_fnc_getFromPairs;
@@ -30,11 +30,11 @@ private _startTime = [
 [[_id], {
 	params ["_id"];
 
-	private _timers = missionNamespace getVariable ["grad_gradPrix_timers", []];
+	private _timers = missionNamespace getVariable ["grad_grandPrix_timers", []];
 	_timers = [_timers, _id] call BIS_fnc_removeFromPairs;
-	grad_gradPrix_timers = _timers;
+	grad_grandPrix_timers = _timers;
 
-	publicVariable "grad_gradPrix_timers";
+	publicVariable "grad_grandPrix_timers";
 }] remoteExecCall ["call", 2];
 
 (_time - _startTime);

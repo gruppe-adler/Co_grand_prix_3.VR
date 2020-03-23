@@ -14,23 +14,23 @@
  * Public: No
  */
 
-private _localId = missionNamespace getVariable ["grad_gradPrix_timerId", 0];
+private _localId = missionNamespace getVariable ["grad_grandPrix_timerId", 0];
 private _globalId = format ["%1_%2", clientOwner, _localId];
 
-grad_gradPrix_timerId = (_localId + 1);
+grad_grandPrix_timerId = (_localId + 1);
 
 [[_globalId], {
 	params ["_id"];
 
-	private _timers = missionNamespace getVariable ["grad_gradPrix_timers", []];
+	private _timers = missionNamespace getVariable ["grad_grandPrix_timers", []];
 	_timers = [
 		_timers,
 		_id,
 		[time, serverTime] select isMultiplayer
 	] call BIS_fnc_setToPairs;
-	grad_gradPrix_timers = _timers;
+	grad_grandPrix_timers = _timers;
 
-	publicVariable "grad_gradPrix_timers";
+	publicVariable "grad_grandPrix_timers";
 }] remoteExecCall ["call", 2];
 
 // return value
