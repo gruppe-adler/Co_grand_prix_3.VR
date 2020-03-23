@@ -29,46 +29,19 @@ if !(isServer) exitWith {
 	_this remoteExecCall ["grad_grandPrix_fnc_addTime", 2];
 };
 
-// this is basically the same as BIS_fnc_getFromPairs, but it allows
-// anything as a key instead of just strings
-private _getFromPairs = {
-	params ["_pairs", "_key", "_default"];
+// this is a cba hash with the group as key and a pairs array as value
+// the pairs look like this -> [_stationId, [_time1, _time2]]
+// e.g. ["gottes_finger", [430]]
+private _times = missionNamespace getVariable ["grad_grandPix_times", ([] call CBA_fnc_hashCreate)];
 
-	private _index = _pairs findIf {(_x select 0) isEqualTo _key};
-
-	private _result = _default;
-
-	if (_index > -1) then {
-		_result = (_pairs select _index) select 1;
-	};
-
-	_result;
+private _groupTimes = [];
+if ([_times, _group] call CBA_fnc_hashHasKey) then {
+	_groupTimes = [_times, _group] call CBA_fnc_hashGet;
 };
-
-// this is basically the same as BIS_fnc_setToPairs, but it allows
-// anything as a key instead of just strings
-private _setToPairs = {
-	params ["_pairs", "_key", "_value"];
-
-	private _pair = [_key, _value];
-
-	private _index = _pairs findIf {(_x select 0) isEqualTo _key};
-
-	if (_index > -1) then {
-		_pairs set [_index, _pair];
-	} else {
-		_pairs pushBack _pair;
-	};
-
-	_pairs;
-};
-
-private _times = missionNamespace getVariable ["grad_grandPix_times", []];
-private _groupTimes = [_times, _group, []] call _getFromPairs;
 
 _groupTimes = [_groupTimes, _station, [_time]] call BIS_fnc_addToPairs;
 
-_times = [_times, _group, _groupTimes] call _setToPairs;
+_times = [_times, _group, _groupTimes] call CBA_fnc_hashSet;
 
 grad_grandPix_times = _times;
 
