@@ -30,7 +30,7 @@ private _guessDistance = _pos distance2d _guessedPos;
 
 private _textRows = [];
 
-if (_guessDistance > 100) then {
+if (_guessDistance > 50) then {
 	_textRows pushBack "<t align='center' color='#b82525' size='2'>EPIC FAIL</t>";
 } else {
 	_textRows pushBack "<t align='center' color='#66AA66' size='2'>Gut geraten!</t>";

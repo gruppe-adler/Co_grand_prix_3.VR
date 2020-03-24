@@ -22,11 +22,11 @@ params [["_station", objNull, [objNull]], ["_positions", [], [[]]]];
 if (isNull _station) exitWith { throw "_station must not be null"; };
 if ((count _positions) isEqualTo 0) exitWith { throw "_positions must at least contain one element"; };
 
-// validate array to contain only arrays with 2 or 3 numbers
+// validate array to contain only arrays of 3 numbers
 for "_i" FROM 0 TO ((count _positions) - 1) do {
-	private _elem = _positions param [_i, [], [[]], [2,3]];
+	private _elem = _positions param [_i, [], [[]], 3];
 
-	for "_j" from 0 to (count _elem) do {
+	for "_j" from 0 to 2 do {
 		_elem param [_j, 0, [0]];
 	}
 };

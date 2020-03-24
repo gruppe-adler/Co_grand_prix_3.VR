@@ -38,11 +38,36 @@ if ((count _positions) isEqualTo 0) exitWith {
 };
 
 private _nextPos = [_positions] call BIS_fnc_arrayShift;
-_nextPos set [2, 0];
 
 private _target = createVehicle [GRAD_GRANDPRIX_GOTTESFINGER_VEHICLE, _nextPos, [], 0, "CAN_COLLIDE"];
+
+private _group = _station getVariable [QGVAR(group), grpNull];
+[
+	QGVAR(handler),
+	"onEachFrame", 
+	{
+		drawIcon3D [
+			"\a3\ui_f\data\igui\cfg\cursors\assaultnolos_ca.paa",
+			[1,0,0,1],
+			(player getVariable [QGVAR(3dIconPos), [0,0,0]]),
+			1,
+			1,
+			0,
+			"",
+			1,
+			1,
+			"RobotoCondensed",
+			"left",
+			true
+		];
+	}
+] remoteExec ["BIS_fnc_addStackedEventHandler", _group];
 
 // update variables
 _station setVariable [QGVAR(positions), _positions, true];
 _station setVariable [QGVAR(currentPosition), _nextPos, true];
 _station setVariable [QGVAR(target), _target, true];
+
+{
+	_x setVariable [QGVAR(3dIconPos), _nextPos, true];
+} forEach (units _group);
