@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=258;
+		nextID=266;
 	};
 	class Camera
 	{
-		pos[]={3558.0415,19.212511,1938.9117};
+		pos[]={3556.5908,12.953634,1961.5636};
 		dir[]={0.12472942,-0.49440247,0.86031163};
 		up[]={0.070946738,0.86919653,0.48935246};
 		aside[]={0.98971522,6.8670488e-007,-0.14348783};
@@ -16281,18 +16281,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3561.8838,5.9444494,1997.3766};
-				angles[]={-0,0.061383229,0};
+				position[]={3561.884,5.9439974,1997.377};
+				angles[]={0,0.061383229,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
-				name="tauchenMitWumsStation";
+				init="call{[_this] call grad_grandPrix_fnc_tauchenMitWums_initStation;}";
 				disableSimulation=1;
 			};
 			id=1816;
 			type="Land_InfoStand_V1_F";
+			atlOffset=5.2649431;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16377,7 +16377,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3556.3123,5.6254511,1995.8701};
-				angles[]={-0,1.6258699,0};
+				angles[]={0,1.6258699,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16393,7 +16393,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3556.1963,5.6698742,1992.1277};
-				angles[]={-0,1.6240222,0};
+				angles[]={0,1.6240222,0};
 			};
 			side="Empty";
 			class Attributes
@@ -16425,7 +16425,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3567.9036,5.6254511,1995.2943};
-				angles[]={-0,4.7554216,0};
+				angles[]={0,4.7554216,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16441,7 +16441,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3567.7329,5.6254511,1992.9568};
-				angles[]={-0,4.7586331,0};
+				angles[]={0,4.7586331,0};
 			};
 			side="Empty";
 			flags=4;
