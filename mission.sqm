@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=266;
+		nextID=274;
 	};
 	class Camera
 	{
-		pos[]={3556.5908,12.953634,1961.5636};
+		pos[]={3560.6199,10.581324,1989.4149};
 		dir[]={0.12472942,-0.49440247,0.86031163};
 		up[]={0.070946738,0.86919653,0.48935246};
 		aside[]={0.98971522,6.8670488e-007,-0.14348783};
@@ -16287,7 +16287,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="call{[_this] call grad_grandPrix_fnc_tauchenMitWums_initStation;}";
+				init="call{[this] call grad_grandPrix_fnc_tauchenMitWums_initStation;}";
 				disableSimulation=1;
 			};
 			id=1816;
