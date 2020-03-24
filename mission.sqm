@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1788;
+		nextID=1789;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4817.1938,256.08139,269.73578};
-		dir[]={-0.41433564,-0.88458616,0.21412942};
-		up[]={-0.78584528,0.46637669,0.40612587};
-		aside[]={0.45911825,-1.3416866e-007,0.8883841};
+		pos[]={5574.7266,245.35065,3928.1775};
+		dir[]={0.26795188,-0.68501294,0.67747211};
+		up[]={0.25194529,0.72852796,0.63700157};
+		aside[]={0.92991126,2.4832843e-008,-0.36779588};
 	};
 };
 binarizationWanted=0;
@@ -3832,7 +3832,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=289;
+		items=290;
 		class Item0
 		{
 			dataType="Layer";
@@ -16634,6 +16634,45 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item289
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5577.1904,235.55817,3933.1467};
+				angles[]={0,0.41247365,0.026651176};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1788;
+			type="Land_InfoStand_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="data\gruppe-adler.paa";
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
