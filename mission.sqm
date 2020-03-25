@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=9;
+	toggles=137;
 	class ItemIDProvider
 	{
-		nextID=1789;
+		nextID=1790;
 	};
 	class MarkerIDProvider
 	{
-		nextID=7;
+		nextID=8;
 	};
 	class LayerIndexProvider
 	{
-		nextID=250;
+		nextID=266;
 	};
 	class Camera
 	{
-		pos[]={5574.7266,245.35065,3928.1775};
-		dir[]={0.26795188,-0.68501294,0.67747211};
-		up[]={0.25194529,0.72852796,0.63700157};
-		aside[]={0.92991126,2.4832843e-008,-0.36779588};
+		pos[]={5572.6787,269.09396,3913.4336};
+		dir[]={-0.01132325,-0.70902759,0.70514357};
+		up[]={-0.011385116,0.70514065,0.70897686};
+		aside[]={0.99990368,8.6119826e-008,0.016056623};
 	};
 };
 binarizationWanted=0;
@@ -3832,7 +3832,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=290;
+		items=291;
 		class Item0
 		{
 			dataType="Layer";
@@ -5028,11 +5028,11 @@ class Mission
 					dataType="Layer";
 					name="Kommentare";
 					id=948;
-					atlOffset=-353.12006;
+					atlOffset=19.799999;
 				};
 			};
 			id=729;
-			atlOffset=-347.62045;
+			atlOffset=16.088165;
 		};
 		class Item2
 		{
@@ -5082,7 +5082,7 @@ class Mission
 					dataType="Layer";
 					name="Kommentare";
 					id=950;
-					atlOffset=-16.140259;
+					atlOffset=19.799999;
 				};
 			};
 			id=730;
@@ -5100,11 +5100,11 @@ class Mission
 					dataType="Layer";
 					name="Kommentare";
 					id=949;
-					atlOffset=-72.46489;
+					atlOffset=19.799999;
 				};
 			};
 			id=731;
-			atlOffset=-212.02696;
+			atlOffset=19.799999;
 		};
 		class Item4
 		{
@@ -9927,7 +9927,6 @@ class Mission
 					flags=2;
 					class Attributes
 					{
-						isPlayer=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -11799,18 +11798,19 @@ class Mission
 		class Item170
 		{
 			dataType="Trigger";
-			position[]={5572.1323,234.07339,3945.0474};
-			angle=0.31416786;
+			position[]={5572.5591,233.91541,3946.229};
+			angle=0.31415927;
 			class Attributes
 			{
 				condition="call{this}";
+				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_startTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=5;
-				sizeB=3;
+				sizeB=5;
 				sizeC=5;
 				interuptable=1;
 				repeatable=1;
+				activationBy="WEST";
 				isRectangle=1;
-				isServerOnly=1;
 			};
 			id=1668;
 			type="EmptyDetectorAreaR50";
@@ -16346,16 +16346,60 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5576.5195,235.00595,3930.8975};
-						angles[]={0,5.0836353,0};
+						position[]={5576.52,235.00595,3930.897};
+						angles[]={0,5.0836377,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
+						ammo=0.89950466;
+						isPlayer=1;
 					};
 					id=1782;
 					type="B_Soldier_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -16467,8 +16511,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5571.5088,236.20607,3937.1907};
-				angles[]={0.058599081,0.35317346,6.2778587};
+				position[]={5571.333,236.22537,3936.8772};
+				angles[]={0.053278212,0.35317346,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16477,6 +16521,7 @@ class Mission
 			};
 			id=1785;
 			type="C_Hatchback_01_sport_F";
+			atlOffset=3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16641,16 +16686,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5577.1904,235.55817,3933.1467};
+				position[]={5577.1909,235.55867,3933.147};
 				angles[]={0,0.41247365,0.026651176};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{[this] call grad_grandPrix_fnc_addActions;}";
 			};
 			id=1788;
 			type="Land_InfoStand_V1_F";
+			atlOffset=-0.0019989014;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16674,6 +16721,20 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item290
+		{
+			dataType="Marker";
+			position[]={5566.2632,234.97501,3927.0901};
+			name="race_marker_1";
+			markerType="RECTANGLE";
+			type="rectangle";
+			alpha=0;
+			a=15;
+			b=5;
+			angle=287.61691;
+			id=1789;
+			atlOffset=-0.01499939;
 		};
 	};
 	class Connections

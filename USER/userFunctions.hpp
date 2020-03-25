@@ -16,7 +16,6 @@ class grad_grandPrix
 	};
 	class race
 	{
-		tag = "grad_grandPrix_race";
 		file = "USER\functions\race";
 		class addActions {};
 		class resetRace {};

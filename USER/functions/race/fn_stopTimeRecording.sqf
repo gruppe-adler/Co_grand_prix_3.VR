@@ -13,3 +13,4 @@ missionNamespace setVariable ["grad_grandPrix_race_results", _results, true];
 
 //Todo: Show time to racer
 private _formatedTime = [_time] call grad_grandPrix_fnc_formatTime;
+hint parseText format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", name _unit, _formatedTime]; 
