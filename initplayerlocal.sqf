@@ -23,3 +23,6 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
         }, [], 1] call CBA_fnc_waitAndExecute;
     }, [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
+["grad_grandPrix_race_results", {
+    [] call grad_grandPrix_fnc_results;
+}] call CBA_fnc_addEventHandler;
