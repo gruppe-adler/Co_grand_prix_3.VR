@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1858;
+		nextID=1860;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6627.4375,1560.4851,2537.7434};
-		dir[]={-0.50057399,-0.81435013,0.29390195};
-		up[]={-0.70229387,0.5803237,0.41233698};
-		aside[]={0.50634396,2.3312168e-007,0.86240697};
+		pos[]={5587.9243,267.2175,3909.8254};
+		dir[]={-0.3602646,-0.5881536,0.72410631};
+		up[]={-0.26200125,0.80872917,0.52660412};
+		aside[]={0.89532727,2.9220246e-007,0.44545436};
 	};
 };
 binarizationWanted=0;
@@ -3778,7 +3778,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=315;
+		items=316;
 		class Item0
 		{
 			dataType="Layer";
@@ -16147,17 +16147,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5567.6284,236.25818,3938.1987};
-				angles[]={0.042641956,0.34914479,6.2511969};
+				position[]={5567.6284,236.25822,3938.199};
+				angles[]={0.042638395,0.3491531,6.251193};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="raceVehicle_1";
 			};
 			id=1784;
 			type="C_Hatchback_01_sport_F";
-			atlOffset=-7.6293945e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16206,16 +16206,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5571.5088,236.20607,3937.1907};
-				angles[]={0.058599081,0.35317346,6.2778587};
+				position[]={5571.5088,236.20605,3937.1912};
+				angles[]={0.058590703,0.35316738,6.2778621};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="raceVehicle_2";
 			};
 			id=1785;
 			type="C_Hatchback_01_sport_F";
+			atlOffset=1.5258789e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16264,13 +16266,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5565.8091,236.42896,3932.0959};
-				angles[]={0.0053265258,0.31517565,0};
+				position[]={5565.8091,236.42896,3932.0957};
+				angles[]={0.0053232545,0.31517157,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="raceVehicle_3";
 			};
 			id=1786;
 			type="C_Hatchback_01_sport_F";
@@ -16322,13 +16325,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5569.2837,236.42606,3930.7644};
-				angles[]={0.0053265258,0.30830422,0};
+				position[]={5569.2842,236.42606,3930.7646};
+				angles[]={0.0053232545,0.30831242,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="raceVehicle_4";
 			};
 			id=1787;
 			type="C_Hatchback_01_sport_F";
@@ -16773,8 +16777,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5563.9282,236.43384,3926.135};
-				angles[]={6.2778478,0.30831242,0.0053377044};
+				position[]={5563.9282,236.43384,3926.1355};
+				angles[]={6.2778444,0.30831242,0.0053407075};
 			};
 			side="Empty";
 			flags=4;
@@ -17026,16 +17030,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6410.7109,11277.505,2920.875};
+				position[]={6421.8931,11277.505,2664.605};
 			};
 			side="Empty";
-			flags=5;
+			flags=1;
 			class Attributes
 			{
 				name="plankeTP_oben";
 			};
 			id=1854;
 			type="GRAD_flag_gruppeAdlerWhite";
+			atlOffset=11023.528;
 		};
 		class Item312
 		{
@@ -17113,6 +17118,35 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item315
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2229.1743,200.41144,2189.8176};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1859;
+					type="B_Competitor_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1858;
 		};
 	};
 	class Connections
