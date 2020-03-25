@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1825;
+		nextID=1831;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=274;
+		nextID=282;
 	};
 	class Camera
 	{
-		pos[]={3560.6199,10.581324,1989.4149};
-		dir[]={0.12472942,-0.49440247,0.86031163};
-		up[]={0.070946738,0.86919653,0.48935246};
-		aside[]={0.98971522,6.8670488e-007,-0.14348783};
+		pos[]={3563.1912,15.924757,1975.3699};
+		dir[]={0.059902746,-0.37198412,0.92637146};
+		up[]={0.024007034,0.92821354,0.37126327};
+		aside[]={0.99798352,8.5256761e-007,-0.064531945};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,14 @@ addons[]=
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Kart_Civ_SportsGrounds",
 	"A3_Soft_F_Gamma_Hatchback_01",
-	"A3_Structures_F_EPA_Walls"
+	"A3_Structures_F_EPA_Walls",
+	"A3_Structures_F_Mil_Helipads"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=27;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -243,6 +244,13 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -3754,7 +3762,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=297;
+		items=298;
 		class Item0
 		{
 			dataType="Layer";
@@ -9593,8 +9601,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3583.5234,-7.7566032,2068.8037};
-				angles[]={1.3148642,2.7597678,1.0171382};
+				position[]={3585.5378,-7.8147001,2070.592};
+				angles[]={6.0244303,1.0618726,0.73095226};
 			};
 			side="Empty";
 			class Attributes
@@ -9603,7 +9611,7 @@ class Mission
 			};
 			id=1618;
 			type="Sign_Arrow_F";
-			atlOffset=0.27128315;
+			atlOffset=0.38601303;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16450,6 +16458,22 @@ class Mission
 			};
 			id=1824;
 			type="Land_InvisibleBarrier_F";
+		};
+		class Item297
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3562.9451,5.6646762,1987.588};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="tauchenMitWumsTeleportPosition";
+			};
+			id=1830;
+			type="Land_HelipadEmpty_F";
+			atlOffset=0.32789707;
 		};
 	};
 	class Connections
