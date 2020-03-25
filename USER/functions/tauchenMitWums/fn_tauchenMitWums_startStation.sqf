@@ -35,7 +35,7 @@ playSound3D ["a3\missions_f_beta\data\sounds\firing_drills\course_active.wss", _
 private _unitsPlayerGroup = units _playerGroup;
 waitUntil {count(_unitsPlayerGroup select {eyePos _x select 2 < 0}) > 0};
 
-private _time = [38] call BIS_fnc_countdown;
+private _time = [300] call BIS_fnc_countdown;
 
 private _id = [] call grad_grandPrix_fnc_startTimer;
 
