@@ -6,6 +6,6 @@
 class jumpTPSound
 {
 	name	= "jumpTPSound";
-	sound[]	= {"\data\jumpTPSound.ogg", db + 0, 1.0 };
+	sound[]	= {"\data\beam.ogg", db + 0, 1.0 };
 	titles[] = {};
 };
