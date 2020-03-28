@@ -1,9 +1,6 @@
 params ["_vehicle"];
 
 private _unit = driver _vehicle;
-
-if ((_unit getVariable ["grad_grandPrix_race_timerID", -1]) isEqualTo -1) exitWith {};
-
 private _id = _unit getVariable ["grad_grandPrix_race_timerID", -1];
 if (_id isEqualTo -1) exitWith {};
 
@@ -15,6 +12,6 @@ missionNamespace setVariable ["grad_grandPrix_race_results", _results, true];
 
 //Todo: Show time to racer
 private _formatedTime = [_time] call grad_grandPrix_fnc_formatTime;
-hint parseText format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", name _unit, _formatedTime]; 
+hintSilent parseText format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", name _unit, _formatedTime]; 
 
 ["grad_grandPrix_race_resultsDown", [_unit]] call CBA_fnc_serverEvent;
