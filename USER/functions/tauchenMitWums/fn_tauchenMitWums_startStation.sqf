@@ -58,7 +58,7 @@ private _allExplosives = [];
 								{
 									params ["_time", "_station"];
 									while {(time < _time) && (_station getVariable ["stationIsRunning", false])} do {
-										hint ([_time - time, "MM:SS"] call BIS_fnc_secondsToString);
+										hintSilent ([_time - time, "MM:SS"] call BIS_fnc_secondsToString);
 										sleep 1;
 									};
 								}
