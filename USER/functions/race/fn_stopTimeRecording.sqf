@@ -15,3 +15,6 @@ private _formatedTime = [_time] call grad_grandPrix_fnc_formatTime;
 hintSilent parseText format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", name _unit, _formatedTime]; 
 
 ["grad_grandPrix_race_resultsDown", [_unit]] call CBA_fnc_serverEvent;
+
+_vehicle allowDamage true;
+_unit allowDamage true;
