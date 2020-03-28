@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1966;
+		nextID=1967;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=362;
+		nextID=378;
 	};
 	class Camera
 	{
-		pos[]={6941.6836,54.007172,6562.1675};
-		dir[]={0.59103942,-0.75367522,-0.28749731};
-		up[]={0.67774653,0.65724808,-0.32967415};
-		aside[]={-0.43742415,1.0454096e-007,-0.89926022};
+		pos[]={6943.3286,58.123974,6595.4951};
+		dir[]={0.41764933,-0.47160587,-0.77668816};
+		up[]={0.22336397,0.88179338,-0.41537783};
+		aside[]={-0.88077462,1.3131648e-007,-0.47362345};
 	};
 };
 binarizationWanted=0;
@@ -3837,7 +3837,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=419;
+		items=420;
 		class Item0
 		{
 			dataType="Layer";
@@ -18384,8 +18384,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6956.0928,20.745073,6552.646};
-				angles[]={5.9077477,3.1834455,0.016510814};
+				position[]={6956.0938,20.699118,6552.6665};
+				angles[]={5.8676329,3.1834772,0.016510814};
 			};
 			side="Empty";
 			class Attributes
@@ -18395,7 +18395,7 @@ class Mission
 			};
 			id=1907;
 			type="TargetP_Inf_F";
-			atlOffset=1.1230927;
+			atlOffset=1.0691185;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18561,6 +18561,29 @@ class Mission
 			id=1911;
 			type="TargetP_Inf3_F";
 			atlOffset=0.23538589;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item368
 		{
@@ -20698,6 +20721,47 @@ class Mission
 			id=1965;
 			type="B_Plane_Fighter_01_F";
 			atlOffset=0.0234375;
+		};
+		class Item419
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6997.0352,26.189161,6511.7041};
+				angles[]={0,2.5671525,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setVariable [""noPop"", true];}";
+				name="SouthTarget8";
+			};
+			id=1966;
+			type="TargetP_Inf_F";
+			atlOffset=13.572;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
