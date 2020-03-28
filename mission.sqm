@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=1860;
+		nextID=1867;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=298;
+		nextID=314;
 	};
 	class Camera
 	{
@@ -62,13 +62,14 @@ addons[]=
 	"A3_Structures_F_EPA_Walls",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Boat_F_Jets_Carrier_01",
-	"gm_structures_euro_80"
+	"gm_structures_euro_80",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -269,6 +270,11 @@ class AddonsMetaData
 			name="gm_structures_euro_80";
 			author="Global Mobilization";
 			url="global-mobilization.com";
+		};
+		class Item29
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -3778,7 +3784,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=316;
+		items=323;
 		class Item0
 		{
 			dataType="Layer";
@@ -17147,6 +17153,121 @@ class Mission
 			{
 			};
 			id=1858;
+		};
+		class Item316
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7196.9077,270.84052,1722.8038};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camPos_01";
+			};
+			id=1860;
+			type="HeliHEmpty";
+			atlOffset=272.94052;
+		};
+		class Item317
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5288.2002,114.16299,1831.235};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camPos_02";
+			};
+			id=1861;
+			type="HeliHEmpty";
+			atlOffset=117.642;
+		};
+		class Item318
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4622.3652,81.736702,2007.896};
+				angles[]={0.090425514,0,6.0476356};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camTarget_01";
+			};
+			id=1862;
+			type="HeliHEmpty";
+			atlOffset=10.660515;
+		};
+		class Item319
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3603.7822,84.988281,2367.7495};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camPos_03";
+			};
+			id=1863;
+			type="HeliHEmpty";
+			atlOffset=79.015541;
+		};
+		class Item320
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2510.8196,50.70166,3015.8652};
+				angles[]={0.090425514,0,6.0476356};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camTarget_02";
+			};
+			id=1864;
+			type="HeliHEmpty";
+			atlOffset=43.037407;
+		};
+		class Item321
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2379.3076,88.544121,3108.7407};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camPos_04";
+			};
+			id=1865;
+			type="HeliHEmpty";
+			atlOffset=42.981617;
+		};
+		class Item322
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2463.6367,23.974545,3909.7285};
+				angles[]={0.090425514,0,6.0476356};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="camTarget_03";
+			};
+			id=1866;
+			type="HeliHEmpty";
+			atlOffset=34.652248;
 		};
 	};
 	class Connections
