@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=346;
+		nextID=362;
 	};
 	class Camera
 	{
-		pos[]={6561.4873,11367.381,4645.6255};
-		dir[]={-0.62328219,-0.78041393,0.050947711};
-		up[]={-0.77783716,0.62524265,0.063581653};
-		aside[]={0.0814723,-7.1604154e-007,0.9967382};
+		pos[]={6941.6836,54.007172,6562.1675};
+		dir[]={0.59103942,-0.75367522,-0.28749731};
+		up[]={0.67774653,0.65724808,-0.32967415};
+		aside[]={-0.43742415,1.0454096e-007,-0.89926022};
 	};
 };
 binarizationWanted=0;
@@ -18390,6 +18390,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				init="call{this setVariable [""noPop"", true];}";
 				name="SouthTarget6";
 			};
 			id=1907;
@@ -20643,7 +20644,7 @@ class Mission
 			};
 			id=1961;
 			type="B_Plane_Fighter_01_F";
-			atlOffset=10993.538;
+			atlOffset=1.2304688;
 		};
 		class Item416
 		{
@@ -20654,13 +20655,13 @@ class Mission
 				angles[]={0,3.129899,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				lock="LOCKED";
 			};
 			id=1963;
 			type="B_Plane_Fighter_01_F";
+			atlOffset=1.2333984;
 		};
 		class Item417
 		{
@@ -20678,7 +20679,7 @@ class Mission
 			};
 			id=1964;
 			type="B_Plane_Fighter_01_F";
-			atlOffset=0.0009765625;
+			atlOffset=0.12695313;
 		};
 		class Item418
 		{
@@ -20696,6 +20697,7 @@ class Mission
 			};
 			id=1965;
 			type="B_Plane_Fighter_01_F";
+			atlOffset=0.0234375;
 		};
 	};
 	class Connections
