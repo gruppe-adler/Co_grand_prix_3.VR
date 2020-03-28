@@ -12,12 +12,7 @@ cutText ["", "BLACK", 0.1];
 
 	_unit addBackpack "B_Parachute";
 	_unit linkItem "ACE_Altimeter";
-
-	[{
-		params ["_unit"];
-
-		_unit playMove "Stand";
-	}, [_unit]] call CBA_fnc_execNextFrame;
+	_unit linkItem "ItemGPS";
 	
-	cutText ["", "BLACK IN", 1];
-},[_unit], 0.2] call CBA_fnc_waitAndExecute;
+	cutText ["", "BLACK IN", 3];
+},[_unit], 0.3] call CBA_fnc_waitAndExecute;

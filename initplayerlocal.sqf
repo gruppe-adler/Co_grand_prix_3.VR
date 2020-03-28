@@ -4,3 +4,9 @@ if (didJIP) then {
 
 ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
+
+grad_grandPrix_plank_results = [];
+
+["grad_grandPrix_race_result", {
+    [] call grad_grandPrix_fnc_plankGroupResult;
+}] call CBA_fnc_addEventHandler;

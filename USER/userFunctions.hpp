@@ -18,6 +18,8 @@ class grad_grandPrix
 	{
 		file = "USER\functions\planke";
 		class addJumpEHs {};
+		class jumpResults {};
+		class plankGroupResult {};
 		class portToCarrier {};
 	};
 };
