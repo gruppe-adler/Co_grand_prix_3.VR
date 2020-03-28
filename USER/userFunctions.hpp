@@ -14,4 +14,11 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+
+	class erstSchiessenDannFragen {
+		file = "USER\functions\erstSchiessenDannFragen";
+		class erstSchiessenDannFragen_initStation {};
+		class erstSchiessenDannFragen_startStation {};
+		class erstSchiessenDannFragen_endStation {};
+	};
 };
