@@ -4,7 +4,7 @@ private _action = [
 	"Start_Tauchen_mit_Wums",
 	"Start",
 	"",
-	{["SatchelCharge_F", _target, (group _player)] spawn grad_grandPrix_fnc_tauchenMitWums_startStation;},
+	{["SatchelCharge_F", _target, (group _player)] call grad_grandPrix_fnc_tauchenMitWums_startStation;},
 	{!(_target getVariable ["stationIsRunning", false])}
 ] call ace_interact_menu_fnc_createAction;
 
