@@ -21,7 +21,7 @@ grad_grandPrix_EH = [_mortar, "fired", {
     };
 }, []] call CBA_fnc_addBISEventHandler;
 
-[900, [GRAD_GRADNPRIX_MORTARVEHICLE], grad_grandPrix_EH, _mortar,player] call grad_grandPrix_fnc_cleanUp;
+[900, [GRAD_GRADNPRIX_MORTARVEHICLE], grad_grandPrix_EH, _mortar, player] call grad_grandPrix_fnc_cleanUp;
 
 [_pos] call grad_grandPrix_fnc_fiveLiner;
 MORTARSHOT_LASTPOS = [];

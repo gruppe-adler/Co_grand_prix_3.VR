@@ -14,4 +14,14 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+	class mortar 
+	{
+		file = "USER\functions\mortar";
+		class calcShot {};
+		class cleanUp {}:
+		class findPos {};
+		class fiveLiner {};
+		class logPos {};
+		class mortarInit {};
+	};
 };
