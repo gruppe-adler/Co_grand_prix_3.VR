@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=458;
+		nextID=474;
 	};
 	class Camera
 	{
-		pos[]={3665.5457,106.45084,3689.1602};
-		dir[]={0.47003061,-0.36305675,0.80455202};
-		up[]={0.18314639,0.93176353,0.31349146};
-		aside[]={0.86346656,-3.9830047e-007,-0.50445217};
+		pos[]={3667.8186,98.064667,3700.969};
+		dir[]={0.44879019,-0.67452401,0.58621496};
+		up[]={0.41003409,0.73825234,0.53559101};
+		aside[]={0.79404241,5.1688403e-007,-0.60790032};
 	};
 };
 binarizationWanted=0;
@@ -23308,6 +23308,7 @@ class Mission
 			class Attributes
 			{
 				init="call{[this] call grad_grandPrix_fnc_pewPew_initStation;}";
+				disableSimulation=1;
 			};
 			id=2029;
 			type="Infostand_1_EP1";
