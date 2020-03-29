@@ -17,11 +17,13 @@ class grad_grandPrix
 	class mortar 
 	{
 		file = "USER\functions\mortar";
+		class addMortarAction {};
 		class calcShot {};
-		class cleanUp {}:
+		class cleanUp {};
 		class findPos {};
 		class fiveLiner {};
 		class logPos {};
 		class mortarInit {};
+		class mortarMessage {};
 	};
 };
