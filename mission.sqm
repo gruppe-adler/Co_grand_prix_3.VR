@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2000;
+		nextID=2015;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=410;
+		nextID=426;
 	};
 	class Camera
 	{
-		pos[]={7118.3877,122.26562,4389.5083};
-		dir[]={0.057089899,-0.2136631,0.97524089};
-		up[]={0.012486384,0.97690815,0.21329905};
-		aside[]={0.99829561,2.87273e-008,-0.058439359};
+		pos[]={6007.3867,336.14929,5387.7749};
+		dir[]={-0.3083837,-0.63277858,0.71027887};
+		up[]={-0.25200835,0.77433079,0.58043319};
+		aside[]={0.91727692,7.1755494e-008,0.39825654};
 	};
 };
 binarizationWanted=0;
@@ -77,13 +77,20 @@ addons[]=
 	"CUP_CAMP_Armory_Misc_Infostands",
 	"A3_Air_F_Jets_Plane_Fighter_01",
 	"A3_Structures_F_EPC_Civ_InfoBoards",
-	"A3_Structures_F_Heli_VR_Helpers"
+	"A3_Structures_F_Heli_VR_Helpers",
+	"A3_Static_F_Mortar_01",
+	"A3_Structures_F_Enoch_Military_Barracks",
+	"ace_common",
+	"ace_flashsuppressors",
+	"ace_grenades",
+	"ace_parachute",
+	"ace_minedetector"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=38;
+		items=45;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -337,6 +344,55 @@ class AddonsMetaData
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item38
+		{
+			className="A3_Static_F";
+			name="Arma 3 Alpha - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item39
+		{
+			className="A3_Structures_F_Enoch_Military";
+			name="Arma 3 Enoch - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item40
+		{
+			className="ace_common";
+			name="ACE3 - Common";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item41
+		{
+			className="ace_flashsuppressors";
+			name="ACE3 - Flash Suppressors";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item42
+		{
+			className="ace_grenades";
+			name="ACE3 - Grenades";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item43
+		{
+			className="ace_parachute";
+			name="ACE3 - Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item44
+		{
+			className="ace_minedetector";
+			name="ACE3 - Mine Detector";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -3845,7 +3901,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=448;
+		items=459;
 		class Item0
 		{
 			dataType="Layer";
@@ -21230,7 +21286,7 @@ class Mission
 			};
 			id=1976;
 			type="Sign_Sphere25cm_F";
-			atlOffset=0.37918091;
+			atlOffset=20.855324;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -22242,6 +22298,294 @@ class Mission
 								};
 							};
 							value="data\verengung.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item448
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5985.8374,307.14554,5419.0659};
+				angles[]={0,6.2150998,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="mortar_1";
+			};
+			id=2000;
+			type="B_Mortar_01_F";
+			atlOffset=1.6570129;
+		};
+		class Item449
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5976.084,301.11087,5414.5288};
+				angles[]={0,4.5996151,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2001;
+			type="Land_HeliPad";
+			atlOffset=-3.5262146;
+		};
+		class Item450
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6009.0654,310.55557,5428.7681};
+				angles[]={0,2.9592736,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2002;
+			type="Land_GuardTower_01_F";
+		};
+		class Item451
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5980.9072,308.59158,5395.8467};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2003;
+			type="GRAD_flag_gruppeAdlerWhite";
+		};
+		class Item452
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6019.71,306.93353,5402.6499};
+				angles[]={0,1.5363528,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2004;
+			type="Land_Billboard_F";
+			atlOffset=-0.024291992;
+		};
+		class Item453
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5987.1963,304.6521,5404.8711};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="mortar";
+						isPlayable=1;
+					};
+					id=2006;
+					type="B_Soldier_GL_F";
+					atlOffset=-3.0517578e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2005;
+			atlOffset=-3.0517578e-005;
+		};
+		class Item454
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5989.4487,304.66614,5405.1919};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="mortar";
+						isPlayable=1;
+					};
+					id=2008;
+					type="B_Soldier_GL_F";
+					atlOffset=-3.0517578e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2007;
+			atlOffset=-3.0517578e-005;
+		};
+		class Item455
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5990.8193,304.67709,5405.4976};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="mortar";
+						isPlayable=1;
+					};
+					id=2010;
+					type="B_Soldier_GL_F";
+					atlOffset=3.0517578e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2009;
+			atlOffset=3.0517578e-005;
+		};
+		class Item456
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5992.7183,304.6937,5405.9507};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						description="mortar";
+						isPlayable=1;
+					};
+					id=2012;
+					type="B_Soldier_GL_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2011;
+		};
+		class Item457
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5984.6289,305.26398,5413.0034};
+				angles[]={0,6.2088871,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{[this] call grad_grandPrix_fnc_addMortarActions;}";
+			};
+			id=2013;
+			type="Land_InfoStand_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="data\gruppe-adler.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item458
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5989.0459,305.02856,5413.5117};
+				angles[]={0,1.4381164,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="supplyBoxMortar";
+			};
+			id=2014;
+			type="ACE_Box_Misc";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
