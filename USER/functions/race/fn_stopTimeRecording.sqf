@@ -3,6 +3,7 @@ params ["_vehicle"];
 private _unit = driver _vehicle;
 private _id = _unit getVariable ["grad_grandPrix_race_timerID", -1];
 if (_id isEqualTo -1) exitWith {};
+_unit setVariable ["grad_grandPrix_race_timerID", -1];
 
 private _time = [_id] call grad_grandPrix_fnc_stopTimer;
 
