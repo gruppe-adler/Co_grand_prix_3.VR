@@ -49,7 +49,7 @@ private _allExplosives = [];
 					},{
 						params ["_explosivesClass", "_station", "_playerGroup", "_allExplosives"];
 
-						private _time = [300] call BIS_fnc_countdown;
+						private _time = serverTime + 300;
 						private _id = [] call grad_grandPrix_fnc_startTimer;
 
 						{
@@ -57,8 +57,8 @@ private _allExplosives = [];
 							[[_time, _station],
 								{
 									params ["_time", "_station"];
-									while {(time < _time) && (_station getVariable ["stationIsRunning", false])} do {
-										hintSilent ([_time - time, "MM:SS"] call BIS_fnc_secondsToString);
+									while {(serverTime < _time) && (_station getVariable ["stationIsRunning", false])} do {
+										hintSilent ([_time - serverTime, "MM:SS"] call BIS_fnc_secondsToString);
 										sleep 1;
 									};
 								}
