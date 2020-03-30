@@ -10,6 +10,7 @@ class grad_grandPrix
 	{
 		file = "USER\functions\util";
 		class addTime {};
+		class clearCrate {};
 		class formatTime {};
 		class startTimer {};
 		class stopTimer {};

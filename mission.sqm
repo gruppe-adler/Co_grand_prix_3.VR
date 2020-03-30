@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=556;
+		nextID=574;
 	};
 	class Camera
 	{
-		pos[]={1060.5204,418.55258,4728.106};
-		dir[]={-0.88983393,-0.39989635,-0.21999659};
-		up[]={-0.38835526,0.91649175,-0.09601447};
-		aside[]={-0.24001803,-1.6700942e-006,0.97082019};
+		pos[]={7020.0854,11776.723,4577.7925};
+		dir[]={-0.56082302,-0.72010267,0.40870321};
+		up[]={-0.58198005,0.69383782,0.4241232};
+		aside[]={0.58899087,9.4127608e-007,0.80820769};
 	};
 };
 binarizationWanted=0;
@@ -20617,21 +20617,21 @@ class Mission
 		class Item312
 		{
 			dataType="Trigger";
-			position[]={6467.6582,11262.928,4443.937};
+			position[]={6485.4463,11203.289,4441.3652};
 			class Attributes
 			{
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x && isPlayer _x) then {" \n "[_x] call grad_grandPrix_fnc_addJumpEHs;" \n "};" \n "} forEach thisList;}";
-				sizeA=20;
-				sizeB=20;
-				sizeC=10;
+				sizeA=100;
+				sizeB=100;
+				sizeC=70;
 				repeatable=1;
 				activationBy="WEST";
 				isRectangle=1;
 			};
 			id=1855;
 			type="EmptyDetector";
-			atlOffset=10971.245;
+			atlOffset=10914.975;
 		};
 		class Item313
 		{
@@ -27762,7 +27762,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={985.62701,399.98999,4713.291};
-				angles[]={-0,6.2779665,0};
+				angles[]={0,6.2779665,0};
 			};
 			areaSize[]={20,0,10};
 			areaIsRectangle=1;
@@ -27817,14 +27817,14 @@ class Mission
 			dataType="Layer";
 			name="Pipes - Small";
 			id=2128;
-			atlOffset=0.13604736;
+			atlOffset=19.799999;
 		};
 		class Item490
 		{
 			dataType="Layer";
 			name="Castle";
 			id=2160;
-			atlOffset=-0.65841675;
+			atlOffset=19.799999;
 		};
 		class Item491
 		{

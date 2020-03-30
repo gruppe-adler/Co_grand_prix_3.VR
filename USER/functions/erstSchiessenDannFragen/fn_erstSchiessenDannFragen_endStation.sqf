@@ -1,6 +1,6 @@
 params ["_station", "_playerGroup", "_allTargets"];
 
-["drillStop"] remoteExec ["playSound", (units _playerGroup];
+["drillStop"] remoteExec ["playSound", (units _playerGroup)];
 
 [{
 	_this params ["_station", "_playerGroup", "_allTargets"];
