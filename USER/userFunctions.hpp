@@ -14,7 +14,12 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
-
+	class tauchenMitWums {
+		file = "USER\functions\tauchenMitWums";
+		class tauchenMitWums_startStation {};
+		class tauchenMitWums_endStation {};
+		class tauchenMitWums_initStation {};
+  };
 	class race
 	{
 		file = "USER\functions\race";
@@ -32,5 +37,6 @@ class grad_grandPrix
 		class jumpResults {};
 		class plankGroupResult {};
 		class portToCarrier {};
+
 	};
 };
