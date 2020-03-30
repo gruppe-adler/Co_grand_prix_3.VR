@@ -27,5 +27,41 @@ class grad_grandPrix
 		class mortarInit {};
 		class mortarMessage {};
 		class mortarStop {};
+  };
+	class erstSchiessenDannFragen {
+		file = "USER\functions\erstSchiessenDannFragen";
+		class erstSchiessenDannFragen_initStation {};
+		class erstSchiessenDannFragen_startStation {};
+		class erstSchiessenDannFragen_endStation {};
+  };
+	class pewPew {
+		file = "USER\functions\pewPew";
+		class pewPew_initStation {};
+		class pewPew_startStation {};
+		class pewPew_endStation {};
+  };
+	class tauchenMitWums {
+		file = "USER\functions\tauchenMitWums";
+		class tauchenMitWums_startStation {};
+		class tauchenMitWums_endStation {};
+		class tauchenMitWums_initStation {};
+  };
+	class race
+	{
+		file = "USER\functions\race";
+		class addActions {};
+		class resetRace {};
+		class results {};
+		class startRace {};
+		class startTimeRecording {};
+		class stopTimeRecording {};
+  };
+	class planke
+	{
+		file = "USER\functions\planke";
+		class addJumpEHs {};
+		class jumpResults {};
+		class plankGroupResult {};
+		class portToCarrier {};
 	};
 };
