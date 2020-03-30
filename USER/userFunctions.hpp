@@ -14,6 +14,12 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+	class pewPew {
+		file = "USER\functions\pewPew";
+		class pewPew_initStation {};
+		class pewPew_startStation {};
+		class pewPew_endStation {};
+  };
 	class tauchenMitWums {
 		file = "USER\functions\tauchenMitWums";
 		class tauchenMitWums_startStation {};
@@ -37,6 +43,5 @@ class grad_grandPrix
 		class jumpResults {};
 		class plankGroupResult {};
 		class portToCarrier {};
-
 	};
 };
