@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=490;
+		nextID=506;
 	};
 	class Camera
 	{
-		pos[]={3675.155,98.277557,3698.2361};
-		dir[]={0.58448958,-0.25936565,0.76886255};
-		up[]={0.15697493,0.9657746,0.20649081};
-		aside[]={0.79610479,-6.1304308e-007,-0.60520202};
+		pos[]={3674.5293,98.277557,3695.4763};
+		dir[]={0.55633789,-0.32740501,0.76377988};
+		up[]={0.19277851,0.94487423,0.26466027};
+		aside[]={0.80832779,-3.8807048e-007,-0.58878863};
 	};
 };
 binarizationWanted=0;
@@ -24485,13 +24485,13 @@ class Mission
 				angles[]={0.0049914722,0,0.013097504};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				name="gottesFingerPoint_7";
 			};
 			id=1975;
 			type="Sign_Sphere25cm_F";
+			atlOffset=12.259254;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24549,7 +24549,7 @@ class Mission
 			};
 			id=1976;
 			type="Sign_Sphere25cm_F";
-			atlOffset=0.37918091;
+			atlOffset=20.855324;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25242,13 +25242,13 @@ class Mission
 				position[]={517.83759,54.735298,6171.2871};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				name="gottesFingerPoint_20";
 			};
 			id=1988;
 			type="Sign_Sphere25cm_F";
+			atlOffset=7.2152977;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -26322,6 +26322,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				name="PewPew_Sir_Niclas";
 			};
 			id=2028;
 			type="Box_IDAP_Equip_F";
