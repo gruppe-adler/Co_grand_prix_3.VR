@@ -124,3 +124,13 @@ class CfgGradCivs {
 
     debugCivState = 0;
 };
+
+//Music
+class CfgMusic {
+	class hinunter_bis_auf_eins
+    {
+        name	= "hinunter_bis_auf_eins";
+        sound[]	= {"\data\hinunter_bis_auf_eins.ogg", db + 0, 1.0 };
+        titles[] = {};
+    };
+};

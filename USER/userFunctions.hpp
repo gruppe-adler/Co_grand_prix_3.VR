@@ -14,4 +14,12 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+	class planke
+	{
+		file = "USER\functions\planke";
+		class addJumpEHs {};
+		class jumpResults {};
+		class plankGroupResult {};
+		class portToCarrier {};
+	};
 };
