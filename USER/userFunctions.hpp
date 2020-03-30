@@ -14,6 +14,7 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+
 	class race
 	{
 		file = "USER\functions\race";
@@ -23,5 +24,13 @@ class grad_grandPrix
 		class startRace {};
 		class startTimeRecording {};
 		class stopTimeRecording {};
+  };
+	class planke
+	{
+		file = "USER\functions\planke";
+		class addJumpEHs {};
+		class jumpResults {};
+		class plankGroupResult {};
+		class portToCarrier {};
 	};
 };
