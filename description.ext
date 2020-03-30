@@ -127,7 +127,7 @@ class CfgGradCivs {
 
 //Music
 class CfgMusic {
-	class Black_Betty
+	class queen
     {
         name	= "queen";
         sound[]	= {"\data\queen.ogg", db + 0, 1.0 };

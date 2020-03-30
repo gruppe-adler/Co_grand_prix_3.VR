@@ -62,7 +62,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                         _camera camCommit 1;
                         [{
                             params ["_camera"];
-                            cutText ["", "BLACK OUT", 1];
+                            cutText ["", "BLACK OUT", 0.5];
 
                             0 fadeMusic 0;
 
@@ -81,22 +81,23 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                                 ["Default", 0, false] call BIS_fnc_setPPeffectTemplate;
 
                                 [{
-                                    cutText ["", "BLACK IN", 2];
+                                    cutText ["", "BLACK IN", 1];
                                     [ace_player, "amovpercmstpslowwrfldnon", 1] call ace_common_fnc_doAnimation;
 
                                     [{
 
-                                        10 fadeMusic 0;
-                                            STHud_UIMode = 1;
-                                            diwako_dui_main_toggled_off = false;
+                                         2 fadeMusic 0;
+                                        STHud_UIMode = 1;
+                                        diwako_dui_main_toggled_off = false;
+                                        ["grad_grandPrix_intro_mainHall_open", []] call CBA_fnc_serverEvent;
 
-                                            [{
-                                                playMusic "";
-                                                0 fadeMusic 1;
-                                            }, [], 11] call CBA_fnc_waitAndExecute;
+                                        [{
+                                            playMusic "";
+                                            0 fadeMusic 1;
                                         }, [], 4] call CBA_fnc_waitAndExecute;
+                                    }, [], 2] call CBA_fnc_waitAndExecute;
                                 }, [], 2] call CBA_fnc_waitAndExecute;
-                            }, _this, 1] call CBA_fnc_waitAndExecute;
+                            }, _this, 0.5] call CBA_fnc_waitAndExecute;
                         }, _this, 9] call CBA_fnc_waitAndExecute;
                     }, _this, 5] call CBA_fnc_waitAndExecute;
                 }, _this, 9] call CBA_fnc_waitAndExecute;
