@@ -33,3 +33,14 @@ grad_grandPrix_plank_results = [];
 ["grad_grandPrix_race_results", {
     [] call grad_grandPrix_fnc_results;
 }] call CBA_fnc_addEventHandler;
+
+["CBA_loadingScreenDone", {
+    [{time > ((_this select 0) + 10)},{
+        params ["", "_didJip"];
+        if (!(_didJip) || {_didJip && !(isNil "GRAD_USER_introOver")}) then {    
+            //if (isNull (getAssignedCuratorLogic ace_player)) then {
+                ["Mediterranean", "Queen"] call GRAD_grandPrix_fnc_intro;
+            //};
+        };
+    }, [time, didJIP]] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addEventHandler;
