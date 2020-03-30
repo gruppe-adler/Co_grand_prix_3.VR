@@ -17,6 +17,7 @@ class grad_grandPrix
 	class mortar 
 	{
 		file = "USER\functions\mortar";
+		class addFireEH {};
 		class addMortarAction {};
 		class calcShot {};
 		class cleanUp {};
@@ -25,5 +26,6 @@ class grad_grandPrix
 		class logPos {};
 		class mortarInit {};
 		class mortarMessage {};
+		class mortarStop {};
 	};
 };
