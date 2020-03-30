@@ -14,4 +14,11 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+
+	class pewPew {
+		file = "USER\functions\pewPew";
+		class pewPew_initStation {};
+		class pewPew_startStation {};
+		class pewPew_endStation {};
+	};
 };
