@@ -14,6 +14,17 @@ class grad_grandPrix
 		class startTimer {};
 		class stopTimer {};
 	};
+
+	class race
+	{
+		file = "USER\functions\race";
+		class addActions {};
+		class resetRace {};
+		class results {};
+		class startRace {};
+		class startTimeRecording {};
+		class stopTimeRecording {};
+  };
 	class planke
 	{
 		file = "USER\functions\planke";

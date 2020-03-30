@@ -127,6 +127,14 @@ class CfgGradCivs {
 
 //Music
 class CfgMusic {
+
+	class Black_Betty
+    {
+        name	= "Black_Betty";
+        sound[]	= {"\data\Black_Betty.ogg", db + 0, 1.0 };
+        titles[] = {};
+    };
+
 	class hinunter_bis_auf_eins
     {
         name	= "hinunter_bis_auf_eins";
@@ -134,3 +142,4 @@ class CfgMusic {
         titles[] = {};
     };
 };
+
