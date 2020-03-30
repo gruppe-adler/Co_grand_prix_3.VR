@@ -15,7 +15,10 @@ private _action = [
 	"stop_mortar", 
 	"Stop Mortar Stage", 
 	"", 
-	{[] call grad_grandPrix_fnc_mortarStop;},
+	{
+		[format ["Stage stopped! Shots fired: %1, Range to Target: %2", Grad_grandPrix_mortar_shoots, GRAD_GRANDPRIX_LASTSHOTRESULT select 0]] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _player];
+		[] call grad_grandPrix_fnc_mortarStop;
+	},
 	{!isNil "GRAD_GRADNPRIX_MORTARVEHICLE"},
 	{}
 ] call ace_interact_menu_fnc_createAction;

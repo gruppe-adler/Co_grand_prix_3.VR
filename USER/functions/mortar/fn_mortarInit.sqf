@@ -6,6 +6,9 @@ supplyBoxMortar addItemCargoGlobal ["ACE_MapTools", 6];
 supplyBoxMortar addBackpackCargoGlobal ["rhsgref_wdl_alicepack", 6];
 supplyBoxMortar addItemCargoGlobal ["ACE_1Rnd_82mm_Mo_HE", 300];
 
+Grad_grandPrix_mortar_shoots = 0;
+publicVariable "Grad_grandPrix_mortar_shoots";
+
 /*
 private _dir = [];
 if (selectRandom [false,true]) then {
@@ -31,10 +34,10 @@ while {lineIntersects [getPosASL GRAD_GRADNPRIX_MORTARVEHICLE, getPosASL mortar_
 GRAD_GRADNPRIX_MORTARVEHICLE addMPEventHandler ["MPKilled", {
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 
-    mortar_1 removeEventHandler ["Fired", GRAD_GRANDPRIX_EH];
-    [mortar_1, false] remoteExecCall ["grad_grandPrix_fnc_addFireEH", group player];
-
     if (local _killer) then {
+        [format ["Target destoryed! Shots fired: %1", Grad_grandPrix_mortar_shoots ]] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _killer];
+        [mortar_1, false] remoteExecCall ["grad_grandPrix_fnc_addFireEH", group _killer];
+
         [] call grad_grandPrix_fnc_mortarStop;
     };
 }];
