@@ -9,9 +9,9 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
     [{time > ((_this select 0) + 10)},{
         params ["", "_didJip"];
         if (!(_didJip) || {_didJip && !(isNil "GRAD_USER_introOver")}) then {    
-            if (isNull (getAssignedCuratorLogic ace_player)) then {
-                ["Mediterranean", "introMusic"] call GRAD_grandPrix_fnc_intro;
-            };
+            //if (isNull (getAssignedCuratorLogic ace_player)) then {
+                ["Mediterranean", "Queen"] call GRAD_grandPrix_fnc_intro;
+            //};
         };
     }, [time, didJIP]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;

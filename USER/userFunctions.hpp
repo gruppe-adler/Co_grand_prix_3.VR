@@ -6,6 +6,11 @@
 class grad_grandPrix
 {
 	tag = "grad_grandPrix";
+	class common
+	{
+		file = "USER\functions\common";
+		class intro {};
+	};
 	class util
 	{
 		file = "USER\functions\util";

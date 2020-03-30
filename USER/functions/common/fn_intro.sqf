@@ -1,9 +1,8 @@
 params ["_effect", "_music"];
-*
+
 [_effect, 0, false] call BIS_fnc_setPPeffectTemplate;
-0 fadeMusic 0;
-playMusic [_music, 20];
-[{3 fadeMusic 1;},[]] call CBA_fnc_execNextFrame;
+playMusic [_music, 0];
+0 fadeMusic 1;
 
 STHud_UIMode = 0;
 diwako_dui_main_toggled_off = true;
