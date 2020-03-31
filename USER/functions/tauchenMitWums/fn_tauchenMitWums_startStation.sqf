@@ -9,6 +9,7 @@ _station setVariable ["defusedExplosives", 0, true];
 
 private _allSpawnPositions = [spawnPositionCharge1, spawnPositionCharge2, spawnPositionCharge3, spawnPositionCharge4, spawnPositionCharge5];
 private _allExplosives = [];
+[TauchenMitWums_Sir_Niclas] call grad_grandPrix_fnc_clearCrate;
 
 {
 	

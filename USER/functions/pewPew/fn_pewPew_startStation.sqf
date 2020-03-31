@@ -52,7 +52,7 @@ private _allPlayerHandlerIDs = [];
 {
 	// Current result is saved in variable _x
 	_x setVariable ["station", _station];
-	private _id = _x addEventHandler ["FiredMan", {
+	_x addEventHandler ["FiredMan", {
 		params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
 
 		private _station = _unit getVariable "station";
@@ -68,4 +68,4 @@ private _allPlayerHandlerIDs = [];
 
 private _time = [] call grad_grandPrix_fnc_startTimer;
 
-[_station, _playerGroup, _allTargets, _time, _allPlayerHandlerIDs] call grad_grandPrix_fnc_pewPew_endStation;
+[_station, _playerGroup, _allTargets, _time] call grad_grandPrix_fnc_pewPew_endStation;

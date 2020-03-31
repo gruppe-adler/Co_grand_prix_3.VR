@@ -51,6 +51,7 @@ class grad_grandPrix
   };
 	class tauchenMitWums {
 		file = "USER\functions\tauchenMitWums";
+		class tauchenMitWums_fillCrate {};
 		class tauchenMitWums_startStation {};
 		class tauchenMitWums_endStation {};
 		class tauchenMitWums_initStation {};

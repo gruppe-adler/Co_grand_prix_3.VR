@@ -52,6 +52,7 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 			deleteVehicle _x;
 		} forEach _allExplosives;
 
+		[TauchenMitWums_Sir_Niclas] call grad_grandPrix_fnc_tauchenMitWums_fillCrate;
 		_station setVariable ["stationIsRunning", false, true];
 	}, [_allExplosives, _station, _playerGroup, _time, _id, _explosivesClass, _eventHandlerID, _amountMinesLeft, _stationDuration], 3] call CBA_fnc_waitAndExecute;
 }, [_allExplosives, _station, _playerGroup, _time, _id, _explosivesClass, _eventHandlerID]] call CBA_fnc_waitUntilAndExecute;
