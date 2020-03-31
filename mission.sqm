@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2344;
+		nextID=2353;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=718;
+		nextID=736;
 	};
 	class Camera
 	{
-		pos[]={1473.5724,1861.0955,1814.7515};
-		dir[]={0.69852883,-0.462051,-0.54656112};
-		up[]={0.3640005,0.88678569,-0.28481114};
-		aside[]={-0.61628127,5.8385194e-007,-0.7876302};
+		pos[]={6792.6616,122.68172,1676.6438};
+		dir[]={0.27758831,-0.42567348,0.86125076};
+		up[]={0.13058336,0.90487748,0.40515062};
+		aside[]={0.95178735,1.0011718e-008,-0.30676877};
 	};
 };
 binarizationWanted=0;
@@ -7199,7 +7199,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=591;
+		items=599;
 		class Item0
 		{
 			dataType="Layer";
@@ -19953,7 +19953,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3562.9451,5.6646762,1987.588};
+				position[]={3558.7859,5.0660605,1934.103};
 			};
 			side="Empty";
 			class Attributes
@@ -19962,7 +19962,7 @@ class Mission
 			};
 			id=1830;
 			type="Land_HelipadEmpty_F";
-			atlOffset=0.32789707;
+			atlOffset=0.72084332;
 		};
 		class Item295
 		{
@@ -27370,7 +27370,7 @@ class Mission
 					};
 					id=2193;
 					type="B_Soldier_F";
-					atlOffset=0.036821365;
+					atlOffset=0.036822319;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -27842,7 +27842,7 @@ class Mission
 					};
 					id=2202;
 					type="B_Soldier_F";
-					atlOffset=0.099754333;
+					atlOffset=0.09975338;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -28093,7 +28093,7 @@ class Mission
 			{
 			};
 			id=2201;
-			atlOffset=0.099754333;
+			atlOffset=0.09975338;
 		};
 		class Item490
 		{
@@ -31696,7 +31696,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4523.1431,13.781359,339.10687};
-			angle=1.7896155;
+			angle=1.7896154;
 			class Attributes
 			{
 				condition="call{this}";
@@ -32237,6 +32237,7 @@ class Mission
 			};
 			id=2313;
 			type="GRAD_flag_gruppeAdlerWhite";
+			atlOffset=-3.8146973e-006;
 		};
 		class Item570
 		{
@@ -32750,7 +32751,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3563.4109,8.7130098,1939.9456};
+						position[]={3563.4109,8.7130089,1939.9456};
 						angles[]={0,4.996232,0};
 					};
 					side="West";
@@ -32847,6 +32848,346 @@ class Mission
 			};
 			id=2342;
 			atlOffset=1.3389893;
+		};
+		class Item591
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6800.5801,116.33477,1686.4939};
+				angles[]={6.2778621,2.2850547,0.037315138};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="ErstSchiessenDannFragen_Sir_Niclas";
+			};
+			id=2344;
+			type="Box_IDAP_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MX_SW_Black_F""],[5]],[[""100Rnd_65x39_caseless_black_mag_tracer""],[5]],[[""optic_Hamr""],[5]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item592
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3536.449,4.8073654,1927.9};
+				angles[]={0,3.3395305,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2345;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item593
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3544.3093,4.8773565,1926.3138};
+				angles[]={0,3.3395305,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2346;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item594
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3552.2468,5.0144606,1925.3671};
+				angles[]={0,3.1718538,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2347;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item595
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3575.8184,5.4676628,1928.2749};
+				angles[]={0,6.0034819,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2349;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item596
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3568.1086,5.5038595,1926.0703};
+				angles[]={0,6.0034819,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2350;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item597
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3583.2297,5.2404346,1931.4463};
+				angles[]={0,2.6399643,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2351;
+			type="Land_PlasticNetFence_01_long_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item598
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3590.2651,5.1854925,1935.2938};
+				angles[]={0,2.6399643,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2352;
+			type="Land_PlasticNetFence_01_long_F";
+			atlOffset=4.7683716e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
