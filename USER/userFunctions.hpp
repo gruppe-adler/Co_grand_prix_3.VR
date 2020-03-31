@@ -40,6 +40,7 @@ class grad_grandPrix
 		class erstSchiessenDannFragen_initStation {};
 		class erstSchiessenDannFragen_startStation {};
 		class erstSchiessenDannFragen_endStation {};
+		class erstSchiessenDannFragen_fillCrate {};
   };
 	class pewPew {
 		file = "USER\functions\pewPew";

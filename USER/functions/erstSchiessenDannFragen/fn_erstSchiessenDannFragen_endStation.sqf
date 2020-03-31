@@ -11,7 +11,7 @@ params ["_station", "_playerGroup", "_allTargets"];
 	
 	private _targetsHit = count(_station getVariable ["targetsHit", []]);
 	private _hostagesHit = count(_station getVariable ["hostagesHit", []]);
-	private _penalty = ((count _allTargets - _targetsHit * 5) + (_hostagesHit * 15));
+	private _penalty = (((count _allTargets - _targetsHit) * 5) + (_hostagesHit * 15));
 
 	[_playerGroup, "erst schiessen, dann fragen", _penalty] call grad_grandPrix_fnc_addTime;
 
@@ -23,5 +23,6 @@ params ["_station", "_playerGroup", "_allTargets"];
 		_x allowDamage false;
 	} forEach _allTargets;
 	
+	[ErstSchiessenDannFragen_Sir_Niclas] call grad_grandPrix_fnc_erstSchiessenDannFragen_fillCrate;
 	_station setVariable ["stationIsRunning", false, true];
 }, [_station, _playerGroup, _allTargets], 2] call CBA_fnc_waitAndExecute;

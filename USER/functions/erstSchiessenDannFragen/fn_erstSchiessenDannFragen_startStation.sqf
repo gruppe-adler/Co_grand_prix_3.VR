@@ -19,6 +19,8 @@ _station setVariable ["targetsSouth", _targetsSouth];
 _station setVariable ["targetsWest", _targetsWest];
 _station setVariable ["targetsHit", []];
 _station setVariable ["hostagesHit", []];
+
+[ErstSchiessenDannFragen_Sir_Niclas] call grad_grandPrix_fnc_clearCrate;
 // _station setVariable ["targetsRemaining", _allTargets];
 
 {
@@ -59,7 +61,7 @@ _station setVariable ["hostagesHit", []];
 				_targets deleteAt (_targets find _target);
 				_station setVariable [_x, _targets];
 
-			[[[_uptime, _station, _target], {
+			[[_uptime, _station, _target], {
 				params ["_uptime", "_station", "_target"];
 				private _id = [_target, "hit", {
 					_thisArgs params ["_target", "_station"];
@@ -84,7 +86,7 @@ _station setVariable ["hostagesHit", []];
 					_target removeEventHandler ["hit", _id];
 					_target animate ["terc", 1];
 				},[_target, _id], _uptime] call CBA_fnc_waitAndExecute;
-			}]] remoteExecCall ["BIS_fnc_call"];
+			}] remoteExecCall ["BIS_fnc_call"];
 			_target animate ["terc", 0];
 		}forEach ["targetsNorth", "targetsEast", "targetsSouth", "targetsWest"];
 
