@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2353;
+		nextID=2355;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=736;
+		nextID=754;
 	};
 	class Camera
 	{
-		pos[]={6792.6616,122.68172,1676.6438};
-		dir[]={0.27758831,-0.42567348,0.86125076};
-		up[]={0.13058336,0.90487748,0.40515062};
-		aside[]={0.95178735,1.0011718e-008,-0.30676877};
+		pos[]={1624.7377,130.34811,1295.0366};
+		dir[]={0.49269542,-0.58279777,0.64623356};
+		up[]={0.35335192,0.81261402,0.46346718};
+		aside[]={0.79524672,-4.1603926e-008,-0.60630226};
 	};
 };
 binarizationWanted=0;
@@ -93,7 +93,8 @@ addons[]=
 	"A3_Structures_F_Exp_Commercial_FuelStation_01",
 	"A3_Boat_F_Exp_Scooter_Transport_01",
 	"A3_Soft_F_Exp_Offroad_02",
-	"ace_nouniformrestrictions"
+	"ace_nouniformrestrictions",
+	"A3_Modules_F_Curator_Environment"
 };
 class AddonsMetaData
 {
@@ -7193,13 +7194,13 @@ class Mission
 		year=2035;
 		month=7;
 		day=6;
-		minute=19;
+		hour=6;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=599;
+		items=601;
 		class Item0
 		{
 			dataType="Layer";
@@ -20348,7 +20349,7 @@ class Mission
 		class Item310
 		{
 			dataType="Trigger";
-			position[]={2237.1948,203.147,2190.1211};
+			position[]={2237.1951,203.147,2190.1211};
 			class Attributes
 			{
 				condition="call{this}";
@@ -31695,12 +31696,12 @@ class Mission
 		class Item557
 		{
 			dataType="Trigger";
-			position[]={4523.1431,13.781359,339.10687};
-			angle=1.7896154;
+			position[]={4523.1431,13.781191,339.10699};
+			angle=1.7896081;
 			class Attributes
 			{
 				condition="call{this}";
-				onActivation="call{{ " \n "if (local _x && {isNil ""grandPrix_introMusik""}) then { " \n "grandPrix_introMusik = true;" \n "0 fadeMusic 1; " \n "playMusic [""queen"",25]; " \n "}; " \n "} forEach thisList;}";
+				onActivation="call{{ " \n "if (local _x && {isNil ""grandPrix_introMusik""}) then {" \n "[""grad_grandPrix_startGroupTimer"", [group _x]] call CBA_fnc_serverEvent; " \n "_x allowDamage false;" \n "grandPrix_introMusik = true;" \n "0 fadeMusic 1; " \n "playMusic [""queen"",25]; " \n "}; " \n "} forEach thisList;}";
 				sizeA=10;
 				sizeB=10;
 				sizeC=5;
@@ -31710,7 +31711,7 @@ class Mission
 			};
 			id=2299;
 			type="EmptyDetectorAreaR50";
-			atlOffset=1.7974882;
+			atlOffset=1.7973204;
 		};
 		class Item558
 		{
@@ -32924,6 +32925,7 @@ class Mission
 			};
 			id=2345;
 			type="Land_PlasticNetFence_01_long_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33004,6 +33006,7 @@ class Mission
 			};
 			id=2347;
 			type="Land_PlasticNetFence_01_long_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33084,6 +33087,7 @@ class Mission
 			};
 			id=2350;
 			type="Land_PlasticNetFence_01_long_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33124,6 +33128,7 @@ class Mission
 			};
 			id=2351;
 			type="Land_PlasticNetFence_01_long_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33164,7 +33169,7 @@ class Mission
 			};
 			id=2352;
 			type="Land_PlasticNetFence_01_long_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33183,6 +33188,58 @@ class Mission
 								};
 							};
 							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item599
+		{
+			dataType="Trigger";
+			position[]={1079.54,394.69208,4714.7432};
+			class Attributes
+			{
+				condition="call{this}";
+				onActivation="call{{" \n "if (local _x) then {" \n "[""grad_grandPrix_stopGroupTimer"", [group(driver _x)]] call CBA_fnc_serverEvent;" \n "};" \n "} forEach thisList;}";
+				sizeA=20;
+				sizeB=10;
+				sizeC=10;
+				repeatable=1;
+				activationBy="WEST";
+				isRectangle=1;
+			};
+			id=2353;
+			type="EmptyDetector";
+		};
+		class Item600
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-345.32901,0,-225.90363};
+			};
+			id=2354;
+			type="ModuleTimeMultiplier_F";
+			atlOffset=19.799999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTimeMultiplier_F_TimeMultiplier";
+					expression="_this setVariable ['TimeMultiplier',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
 						};
 					};
 				};

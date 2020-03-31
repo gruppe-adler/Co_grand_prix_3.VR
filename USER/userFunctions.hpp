@@ -18,6 +18,7 @@ class grad_grandPrix
 		class backPorter {};
 		class clearCrate {};
 		class formatTime {};
+		class showTime {};
 		class startTimer {};
 		class stopTimer {};
 	};
