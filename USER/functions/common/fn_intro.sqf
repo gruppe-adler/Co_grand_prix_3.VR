@@ -26,20 +26,23 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
     _camera camCommit 0;
     _camera camSetPos (getPos camPos_01);
     _camera camSetTarget camTarget_01;
+    _camera camCommit 0;
+    _camera camSetPos (getPos camPos_02);
+    _camera camCommit 30;
 
     showCinemaBorder true;
 
     cutText ["", "BLACK IN", 1];
     [{
         params ["_camera"];
-        _camera camSetFov 0.05;
+        _camera camSetFov 0.1;
         _camera camCommit 30;
 
         [{
             params ["_camera"];
-            cutText ["", "BLACK OUT", 0.2];
+            cutText ["", "BLACK OUT", 0.1];
 
-            0.1 fadeMusic 0;
+            0 fadeMusic 0;
 
             [{
                 params ["_camera", "_filmgrain"];
@@ -60,6 +63,12 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                     [ace_player, "amovpercmstpslowwrfldnon", 1] call ace_common_fnc_doAnimation;
 
                     [{
+                        _missionName = getMissionConfigValue ["onLoadName", "NAME NOT FOUND"];
+                        _text = format ["<img size= '6' style='vertical-align:middle' shadow='false' image='data\gruppe-adler.paa'/><br/><t size='.9' color='#FFFFFF'>%1</t>", _missionName];
+                        [_text,0,0,2,2] spawn BIS_fnc_dynamicText;
+                    }, [], 2] call CBA_fnc_waitAndExecute;
+
+                    [{
 
                         2 fadeMusic 0;
                         STHud_UIMode = 1;
@@ -71,8 +80,8 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                             0 fadeMusic 1;
                         }, [], 4] call CBA_fnc_waitAndExecute;
                     }, [], 2] call CBA_fnc_waitAndExecute;
-                }, [], 2] call CBA_fnc_waitAndExecute;
-            }, _this, 0.3] call CBA_fnc_waitAndExecute;
-        }, _this, 21.5] call CBA_fnc_waitAndExecute;
-    }, [_camera, _filmgrain], 0.1] call CBA_fnc_waitAndExecute;
+                }, [], 2] call CBA_fnc_waitAndExecute;w
+            }, _this, 0.2] call CBA_fnc_waitAndExecute;
+        }, _this, 16.5] call CBA_fnc_waitAndExecute;
+    }, [_camera, _filmgrain], 5] call CBA_fnc_waitAndExecute;
 }, [], 3] call CBA_fnc_waitAndExecute;
