@@ -34,28 +34,38 @@ for "_i" FROM 0 TO ((count _positions) - 1) do {
 // store available positions
 _station setVariable [QGVAR(availablePositions), _positions];
 
-private _action1 = [
-	QGVAR(start),
-	"Start",
-	"",
-	{[_target, (group _player)] call FUNC_CUSTOM(start);},
-	{!(_target getVariable [QGVAR(running), false])}
-] call ace_interact_menu_fnc_createAction;
-
-private _action2 = [
-	QGVAR(guess),
-	"Position raten",
-	"",
-	{[_target, _player] call FUNC_CUSTOM(openDisplay);},
-	{_target getVariable [QGVAR(running), false]}
-] call ace_interact_menu_fnc_createAction;
-
-private _action3 = [
-	QGVAR(cancel),
-	"Abbrechen",
-	"",
+_station addAction [
+	"<t color='#66AA66' size='1.5'>Start</t>",
 	{
-		[_target, _player] spawn {
+		params ["_target", "_player"];
+		[_target, (group _player)] call FUNC_CUSTOM(start);
+	},
+	nil,
+	1.5,
+	true,
+	true,
+	"",
+	QUOTE(!(_target getVariable [ARR_2(QUOTE(QGVAR(running)), false)]))
+];
+
+_station addAction [
+	"<t color='#d18d1f' size='1.5'>Position raten</t>",
+	{
+		params ["_target", "_player"];
+		[_target, _player] call FUNC_CUSTOM(openDisplay);
+	},
+	nil,
+	1.5,
+	true,
+	true,
+	"",
+	QUOTE((_target getVariable [ARR_2(QUOTE(QGVAR(running)), false)]))
+];
+
+_station addAction [
+	"<t color='#b82525' size='1.5'>Abbrechen</t>",
+	{
+		_this spawn {
 			params ["_target", "_player"];
 
 			private _result = [
@@ -70,11 +80,11 @@ private _action3 = [
 
 			[_target, _player] call FUNC_CUSTOM(cancel);
 		}
-		
 	},
-	{(_target getVariable [QGVAR(running), false]) && [] call grad_adminMessages_fnc_isAdminOrZeus}
-] call ace_interact_menu_fnc_createAction;
-
-[_station, 0, ["ACE_MainActions"], _action1] call ace_interact_menu_fnc_addActionToObject;
-[_station, 0, ["ACE_MainActions"], _action2] call ace_interact_menu_fnc_addActionToObject;
-[_station, 0, ["ACE_MainActions"], _action3] call ace_interact_menu_fnc_addActionToObject;
+	nil,
+	1.5,
+	true,
+	true,
+	"",
+	QUOTE((_target getVariable [ARR_2(QUOTE(QGVAR(running)), false)]) && [] call grad_adminMessages_fnc_isAdminOrZeus)
+];
