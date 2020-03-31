@@ -167,3 +167,25 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 	grad_grandPrix_intro_mainHall animateSource ["Zeroanimation", 1];
 	grad_grandPrix_intro_mainHall animateSource ["TwoAnimation", 2];
 }] call CBA_fnc_addEventHandler;
+
+["grad_grandPrix_startGroupTimer", {
+	params ["_group"];
+
+	private _id = missionNamespace getVariable [format["groupTimer%1", _group], -1];
+	if !(_id isEqualTo -1) exitWith {};
+
+	_id = [] call grad_grandPrix_fnc_startTimer;
+	missionNamespace setVariable [format["groupTimer%1", _group], _id];
+}] call CBA_fnc_addEventHandler;
+
+["grad_grandPrix_stopGroupTimer", {
+	params ["_group"];
+
+	private _id = missionNamespace getVariable [format["groupTimer%1", _group], -1];
+	if (_id isEqualTo -1) exitWith {};
+	missionNamespace setVariable [format["groupTimer%1", _group], -1];
+
+	private _time = [_id] call grad_grandPrix_fnc_stopTimer;
+	private _formatedTime = [_time] call grad_grandPrix_fnc_formatTime;
+
+}] call CBA_fnc_addEventHandler;

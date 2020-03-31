@@ -29,20 +29,23 @@ if !(isServer) exitWith {
 	_this remoteExecCall ["grad_grandPrix_fnc_addTime", 2];
 };
 
+diag_log format ["Grad_grandPrix_%1: %2", _station, _time];
+
 // this is a cba hash with the group as key and a pairs array as value
 // the pairs look like this -> [_stationId, [_time1, _time2]]
 // e.g. ["gottes_finger", [430]]
-private _times = missionNamespace getVariable ["grad_grandPrix_times", ([] call CBA_fnc_hashCreate)];
+private _stationTimes = missionNamespace getVariable [format ["grad_grandPrix_times_%1", _group], []];
 
-private _groupTimes = [];
-if ([_times, _group] call CBA_fnc_hashHasKey) then {
-	_groupTimes = [_times, _group] call CBA_fnc_hashGet;
+if (_stationTimes isEqualTo []) then {
+	_stationTimes = [_time, [[_station, _time]]];
+} else {
+	_stationTimes params ["_overAllTime", "_stations"];
+
+	_overAllTime = _overAllTime + _time;
+	_stations pushBackUnique [_station, _time];
+
+	_stationTimes = [_overAllTime, _stations];
 };
 
-_groupTimes = [_groupTimes, _station, [_time]] call BIS_fnc_addToPairs;
+missionNamespace setVariable [format ["grad_grandPrix_times_%1", _group], _stationTimes];
 
-_times = [_times, _group, _groupTimes] call CBA_fnc_hashSet;
-
-grad_grandPrix_times = _times;
-
-publicVariable "grad_grandPrix_times";
