@@ -17,7 +17,6 @@ if !((_unit getVariable ["Grad_grandPrix_plank_pullhight", -1]) isEqualTo -1) ex
 	_unit removeEventHandler ["GetOutMan", _thisID];
 	[_unit] call grad_grandPrix_fnc_jumpResults;
 
-	
 	["grad_grandPrix_plank_jumpersDown", [_unit]] call CBA_fnc_serverEvent;
 }] call CBA_fnc_addBISEventHandler;
 
