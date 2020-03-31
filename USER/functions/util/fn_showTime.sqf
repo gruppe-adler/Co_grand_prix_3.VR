@@ -14,6 +14,7 @@ private _groupsArray = [];
 
 {
 	private _stationTimes = missionNamespace getVariable [format ["grad_grandPrix_times_%1", _x], []];
+	_stationTimes pushBack _x;
 	_groupsArray pushBackUnique _stationTimes;
 }forEach _groups;
 
@@ -37,3 +38,14 @@ while {(count _groupsArray) > 0} do {
 	_newArray pushBackUnique _array;
 	_groupsArray deleteAt _index;
 };
+
+private _structured = ["<t align='center' color='#D18D1F' size='2'>End Results:</t>"]; 
+_structured pushBack "<t align='right' font='EtelkaMonospacePro'>-------------------------</t>"; 
+
+{
+	_x params ["_overAllTime", "", "_group"];
+
+	_structured pushBack format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", name _group, _overAllTime];  
+}forEach _newArray;
+
+[parseText (_structured joinString "<br />"), false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", -2];

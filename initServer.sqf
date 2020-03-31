@@ -188,4 +188,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 	private _time = [_id] call grad_grandPrix_fnc_stopTimer;
 	private _formatedTime = [_time] call grad_grandPrix_fnc_formatTime;
 
+	private _message = format ["Endzeit ohne Strafzeit: %1", _formatedTime];
+	[_message, false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", _group];
+
 }] call CBA_fnc_addEventHandler;
