@@ -69,11 +69,11 @@ _station setVariable ["hostagesHit", []];
 					if (typeOf _target in ["TargetP_Civ_F", "TargetP_Civ2_F"]) then {
 						private _targetsHit = _station getVariable ["hostagesHit", []];
 						_targetsHit pushBackUnique _target;
-						_station setVariable ["hostagesHit", _targetsHit];	
+						_station setVariable ["hostagesHit", _targetsHit, true];	
 					} else {
 						private _targetsHit = _station getVariable ["targetsHit", []];
 						_targetsHit pushBackUnique _target;
-						_station setVariable ["targetsHit", _targetsHit];	 
+						_station setVariable ["targetsHit", _targetsHit, true];	 
 					};
 
 				}, [_target, _station]] call CBA_fnc_addBISEventHandler;
