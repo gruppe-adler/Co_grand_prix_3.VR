@@ -39,7 +39,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
             params ["_camera"];
             cutText ["", "BLACK OUT", 0.2];
 
-            0 fadeMusic 0;
+            0.1 fadeMusic 0;
 
             [{
                 params ["_camera", "_filmgrain"];
@@ -73,6 +73,6 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                     }, [], 2] call CBA_fnc_waitAndExecute;
                 }, [], 2] call CBA_fnc_waitAndExecute;
             }, _this, 0.3] call CBA_fnc_waitAndExecute;
-        }, _this, 25] call CBA_fnc_waitAndExecute;
-    }, [_camera, _filmgrain], 1] call CBA_fnc_waitAndExecute;
+        }, _this, 21.5] call CBA_fnc_waitAndExecute;
+    }, [_camera, _filmgrain], 0.1] call CBA_fnc_waitAndExecute;
 }, [], 3] call CBA_fnc_waitAndExecute;
