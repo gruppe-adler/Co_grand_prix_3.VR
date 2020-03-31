@@ -62,7 +62,7 @@ private _allExplosives = [];
 				{
 					// Current result is saved in variable _x
 					_station setVariable ["defusedExplosives",((_station getVariable "defusedExplosives") + 1), true];
-					[format["%1 von 5 Sprengladungen entschärft", _station getVariable "defusedExplosives"]] remoteExec ["hint", _x];
+					[format["%1 von 5 Sprengladungen entschärft", _station getVariable "defusedExplosives"]] remoteExec ["systemChat", _x];
 				} forEach (units _playerGroup);
 
 				[{
