@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2216;
+		nextID=2218;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=574;
+		nextID=628;
 	};
 	class Camera
 	{
-		pos[]={4611.6021,17.235588,359.81674};
-		dir[]={0.2890445,-0.41584101,0.86231542};
-		up[]={0.13216719,0.90942609,0.39429691};
-		aside[]={0.94818515,5.0006201e-007,-0.31782773};
+		pos[]={3674.8652,98.279831,3694.9705};
+		dir[]={0.28764832,-0.47633001,0.83090723};
+		up[]={0.15582789,0.87926328,0.45012715};
+		aside[]={0.9449963,-6.0652383e-008,-0.32714623};
 	};
 };
 binarizationWanted=0;
@@ -25798,6 +25798,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				init="call{[this, false] call ace_dragging_fnc_setDraggable;" \n "[this, false] call ace_dragging_fnc_setCarryable;}";
 				name="PewPew_Sir_Niclas";
 			};
 			id=2028;
@@ -25826,6 +25827,25 @@ class Mission
 				};
 				class Attribute1
 				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute2
+				{
 					property="ace_arsenal_attribute";
 					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
 					class Value
@@ -25853,150 +25873,6 @@ class Mission
 												"ARRAY"
 											};
 										};
-										class value
-										{
-											items=10;
-											class Item0
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="srifle_LRR_F";
-												};
-											};
-											class Item1
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="7Rnd_408_Mag";
-												};
-											};
-											class Item2
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_ATragMX";
-												};
-											};
-											class Item3
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_Kestrel4500";
-												};
-											};
-											class Item4
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_Tripod";
-												};
-											};
-											class Item5
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_microDAGR";
-												};
-											};
-											class Item6
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_RangeCard";
-												};
-											};
-											class Item7
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="ACE_Vector";
-												};
-											};
-											class Item8
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Laserdesignator_03";
-												};
-											};
-											class Item9
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Laserbatteries";
-												};
-											};
-										};
 									};
 								};
 								class Item1
@@ -26017,7 +25893,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="hideObject";
 					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
@@ -26032,11 +25908,11 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
-				nAttributes=3;
+				nAttributes=4;
 			};
 		};
 		class Item454
@@ -27798,7 +27674,7 @@ class Mission
 					};
 					id=2212;
 					type="B_Soldier_F";
-					atlOffset=0.054732323;
+					atlOffset=0.054731369;
 				};
 				class Item1
 				{
@@ -27851,14 +27727,14 @@ class Mission
 					};
 					id=2215;
 					type="B_Soldier_F";
-					atlOffset=0.054732323;
+					atlOffset=0.054731369;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=2211;
-			atlOffset=0.054732323;
+			atlOffset=0.054731369;
 		};
 	};
 	class Connections

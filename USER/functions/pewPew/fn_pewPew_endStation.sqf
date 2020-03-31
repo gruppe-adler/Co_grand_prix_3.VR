@@ -12,7 +12,7 @@ params ["_station", "_playerGroup", "_allTargets", "_timer", "_allPlayerHandlerI
 	
 	[_station, false] remoteExecCall ["grad_grandPrix_pewPew_addEH", _playerGroup];
 
-	PewPew_Sir_Niclas hideObjectGlobal true;
+	[PewPew_Sir_Niclas] call grad_grandPrix_fnc_clearCrate;
 	_station setVariable ["stationIsRunning", false, true];
 
 	[{
