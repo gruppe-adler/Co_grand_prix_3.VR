@@ -35,7 +35,7 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 
 		{
 			// Current result is saved in variable _x
-			private _position = getPosASL tauchenMitWumsTeleportPosition;
+			private _position = (getPosASL tauchenMitWumsTeleportPosition) vectorAdd [0, 0, 1];
 			_x setPosASL _position;
 		} forEach (units _playerGroup);
 

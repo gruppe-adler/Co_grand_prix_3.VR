@@ -33,7 +33,7 @@ _station setVariable ["hostagesHit", []];
 	{
 		// Current result is saved in variable _x
 		private _pos = selectRandom _portPositions;
-		_portPositions deleteAt (_porPositions find _pos);
+		_portPositions deleteAt (_portPositions find _pos);
 		_x setPosASL (getPosASL _pos);
 	} forEach (units _playerGroup);
 }, [_portPositions, _playerGroup], 0.5] call CBA_fnc_waitAndExecute;
@@ -54,34 +54,37 @@ _station setVariable ["hostagesHit", []];
 
 		private _uptime = (random 2) +2;
 		{
-			private _targets = _station getVariable [_x, []];
-			private _target = selectRandom _targets;
-			_targets deleteAt (_targets find _target);
-			_station setVariable [_x, _targets];
+				private _targets = _station getVariable [_x, []];
+				private _target = selectRandom _targets;
+				_targets deleteAt (_targets find _target);
+				_station setVariable [_x, _targets];
 
-			private _id = [_target, "hit", {
-				_thisArgs params ["_target", "_station"];
+			[[[_uptime, _station, _target], {
+				params ["_uptime", "_station", "_target"];
+				private _id = [_target, "hit", {
+					_thisArgs params ["_target", "_station"];
 
-				_target removeEventHandler ["hit", _thisID];
+					_target removeEventHandler ["hit", _thisID];
 
-				if (typeOf _target in ["TargetP_Civ_F", "TargetP_Civ2_F"]) then {
-					private _targetsHit = _station getVariable ["hostagesHit", []];
-					_targetsHit pushBackUnique _target;
-					_station setVariable ["hostagesHit", _targetsHit];	
-				} else {
-					private _targetsHit = _station getVariable ["targetsHit", []];
-					_targetsHit pushBackUnique _target;
-					_station setVariable ["targetsHit", _targetsHit];	 
-				};
+					if (typeOf _target in ["TargetP_Civ_F", "TargetP_Civ2_F"]) then {
+						private _targetsHit = _station getVariable ["hostagesHit", []];
+						_targetsHit pushBackUnique _target;
+						_station setVariable ["hostagesHit", _targetsHit];	
+					} else {
+						private _targetsHit = _station getVariable ["targetsHit", []];
+						_targetsHit pushBackUnique _target;
+						_station setVariable ["targetsHit", _targetsHit];	 
+					};
 
-			}, [_target, _station]] call CBA_fnc_addBISEventHandler;
+				}, [_target, _station]] call CBA_fnc_addBISEventHandler;
 
-			[{
-				params ["_target", "_id"];
+				[{
+					params ["_target", "_id"];
 
-				_target removeEventHandler ["hit", _id];
-				_target animate ["terc", 1];
-			},[_target, _id], _uptime] call CBA_fnc_waitAndExecute;
+					_target removeEventHandler ["hit", _id];
+					_target animate ["terc", 1];
+				},[_target, _id], _uptime] call CBA_fnc_waitAndExecute;
+			}]] remoteExecCall ["BIS_fnc_call"];
 			_target animate ["terc", 0];
 		}forEach ["targetsNorth", "targetsEast", "targetsSouth", "targetsWest"];
 

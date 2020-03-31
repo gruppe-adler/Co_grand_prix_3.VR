@@ -9,10 +9,8 @@ params ["_station", "_playerGroup", "_allTargets", "_timer", "_allPlayerHandlerI
 	private _time = [_timer] call grad_grandPrix_fnc_stopTimer;
 	private _timeScore = _time + ((_station getVariable ["shotsFired", 4]) * 3);
 	[_playerGroup, "PewPew", _timeScore] call grad_grandPrix_fnc_addTime;
-	{
-		// Current result is saved in variable _x
-		["FiredMan", _x] call CBA_fnc_removeEventHandler;
-	} forEach _allPlayerHandlerIDs;
+	
+	[_station, false] remoteExecCall ["grad_grandPrix_pewPew_addEH", _playerGroup];
 
 	PewPew_Sir_Niclas hideObjectGlobal true;
 	_station setVariable ["stationIsRunning", false, true];

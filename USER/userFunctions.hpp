@@ -42,6 +42,7 @@ class grad_grandPrix
   };
 	class pewPew {
 		file = "USER\functions\pewPew";
+		class pewPew_addEh {};
 		class pewPew_initStation {};
 		class pewPew_startStation {};
 		class pewPew_endStation {};
