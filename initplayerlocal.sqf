@@ -5,9 +5,7 @@ if (didJIP) then {
 ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
-grad_grandPrix_plank_results = [];
-
-["grad_grandPrix_race_result", {
+["grad_grandPrix_plank_result", {
     [] call grad_grandPrix_fnc_plankGroupResult;
 }] call CBA_fnc_addEventHandler;
 
@@ -30,10 +28,11 @@ grad_grandPrix_plank_results = [];
     }, [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
-["grad_grandPrix_race_results", {
+["grad_grandPrix_race_result", {
     [] call grad_grandPrix_fnc_results;
 }] call CBA_fnc_addEventHandler;
 
+/*
 ["CBA_loadingScreenDone", {
     [{time > ((_this select 0) + 10)},{
         params ["", "_didJip"];
@@ -44,3 +43,4 @@ grad_grandPrix_plank_results = [];
         };
     }, [time, didJIP]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
+*/

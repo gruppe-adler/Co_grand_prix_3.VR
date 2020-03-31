@@ -7,7 +7,7 @@ private _results = missionNamespace getVariable ["grad_grandPrix_plank_results",
 _results pushBackUnique [_unit, _pullHight, _distance];
 missionNamespace setVariable ["grad_grandPrix_plank_results", _results, true];
 
-private _structured = ["<t align='left' color='#D18D1F' size='2'>Pull hight:</t><t align='right' color='#D18D1F' size='2'>Distanze:</t>", ""]; 
+private _structured = ["<t align='left' color='#D18D1F' size='2'>Pull hight:</t><t align='right' color='#D18D1F' size='2'>Distance:</t>", ""]; 
 _structured pushBack "<t align='center'>------------------------------------</t>"; 
 _structured pushBack format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", _pullHight, _distance]; 
 
