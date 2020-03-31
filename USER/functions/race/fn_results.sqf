@@ -1,3 +1,5 @@
+systemChat "Race Results";
+
 private _results = missionNamespace getVariable ["grad_grandPrix_race_results", []];
 missionNamespace setVariable ["grad_grandPrix_race_results", [], true];
 

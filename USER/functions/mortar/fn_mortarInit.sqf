@@ -35,7 +35,9 @@ GRAD_GRADNPRIX_MORTARVEHICLE addMPEventHandler ["MPKilled", {
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 
     if (local _killer) then {
-        [format ["Target destoryed! Shots fired: %1", Grad_grandPrix_mortar_shoots ]] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _killer];
+        private _strafe = [Grad_grandPrix_mortar_shoots *5] call grad_grandPrix_fnc_formatTime;
+        private _message = format ["Target destoryed! Shots fired: %1 <br /> %2 Strafzeit hinzugefügt", Grad_grandPrix_mortar_shoots, _strafe];
+        [_message, false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _killer];
         [mortar_1, false] remoteExecCall ["grad_grandPrix_fnc_addFireEH", group _killer];
 
         [] call grad_grandPrix_fnc_mortarStop;

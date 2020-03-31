@@ -59,7 +59,9 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 	params ["_unit"];
 	if (Grad_grandPrix_plank_jumpers isEqualTo []) exitWith {};
 
-	Grad_grandPrix_plank_jumpers  params ["_group", "_count"];
+	Grad_grandPrix_plank_jumpers params ["_group", "_count"];
+
+	systemChat format ["Jump counter: %1", _count];
 
 	if (_count <= 1) then {
 		[{
@@ -101,7 +103,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 ["grad_grandPrix_intro_mainHall_open", {
 	if (grad_grandPrix_intro_mainHall animationSourcePhase "Zeroanimation" > 0) exitWith {};
 
-	grad_grandPrix_intro_mainHall animateSource ["OneAnimation", 0];
+	grad_grandPrix_intro_mainHall animateSource ["OneAnimation", -2];
 	grad_grandPrix_intro_mainHall animateSource ["Zeroanimation", 1];
 	grad_grandPrix_intro_mainHall animateSource ["TwoAnimation", 2];
 }] call CBA_fnc_addEventHandler;

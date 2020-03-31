@@ -1,3 +1,7 @@
-params ["_message"];
+params ["_message", ["_bool", true]];
 
-systemChat _message;
+if (_bool) then {
+	systemChat _message;
+} else {
+	hintSilent _message;
+};

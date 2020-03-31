@@ -19,3 +19,10 @@ hintSilent parseText format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t
 
 _vehicle allowDamage true;
 _unit allowDamage true;
+
+5 fadeMusic 0;
+
+[{
+	playMusic "";
+	1 fadeMusic 1;
+}, [], 6] call CBA_fnc_waitAndExecute;
