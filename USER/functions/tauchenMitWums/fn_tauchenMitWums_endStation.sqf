@@ -6,13 +6,13 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 	// Current result is saved in variable _x
 	[{!(mineActive (_this select 0))}, 
 		{grad_grandPrix_tauchen_defusedExplosives pushBackUnique (_this select 0);}, 
-	[_x], _time - time] call CBA_fnc_waitUntilAndExecute;
+	[_x], _time - serverTime] call CBA_fnc_waitUntilAndExecute;
 } forEach _allExplosives;
 
 [{
 	params ["_allExplosives", "", "", "_time", "", "", ""];
 
-	(((count _allExplosives) isEqualTo (count grad_grandPrix_tauchen_defusedExplosives)) || {time >= _time})
+	(((count _allExplosives) isEqualTo (count grad_grandPrix_tauchen_defusedExplosives)) || {serverTime >= _time})
 },{
 	params ["_allExplosives", "_station", "_playerGroup", "_time", "_id", "_explosivesClass", "_eventHandlerID"];
 
