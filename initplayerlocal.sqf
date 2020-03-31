@@ -32,7 +32,7 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
     [] call grad_grandPrix_fnc_results;
 }] call CBA_fnc_addEventHandler;
 
-/*
+
 ["CBA_loadingScreenDone", {
     [{time > ((_this select 0) + 10)},{
         params ["", "_didJip"];
@@ -43,4 +43,3 @@ grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
         };
     }, [time, didJIP]] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addEventHandler;
-*/
