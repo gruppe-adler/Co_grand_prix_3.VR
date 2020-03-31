@@ -6,7 +6,7 @@ if !(isServer) exitWith {
 
 _station setVariable ["stationIsRunning", true, true];
 _station setVariable ["shotsFired", 0, true];
-_station setVariable ["targetsHit", []];
+_station setVariable ["targetsHit", [], true];
 
 private _allTargets = [PewPewTarget1, PewPewTarget2, PewPewTarget3, PewPewTarget4];
 private _allPlayerHandlerIDs = [];

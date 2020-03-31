@@ -15,7 +15,7 @@ params ["_station", "_playerGroup", "_allTargets"];
 
 	[_playerGroup, "erst schiessen, dann fragen", _penalty] call grad_grandPrix_fnc_addTime;
 
-	[formatText["Ihr habt %1 von %2 Zielen, sowie %3 Zivilisten getroffen!%4Das ergibt %5 Strafsekunden!", _targetsHit, count _allTargets, _hostagesHit, lineBreak, _penalty]] remoteExec ["hint", units _playerGroup];
+	[formatText["Ihr habt %1 von %2 Zielen, sowie %3 Zivilisten getroffen!%4Damit kommen %5 Minuten auf euer Zeitkonto!", _targetsHit, count _allTargets, _hostagesHit, lineBreak, [_penalty, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", units _playerGroup];
 
 	{
 		// Current result is saved in variable _x
