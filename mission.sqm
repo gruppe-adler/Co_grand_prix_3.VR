@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2644;
+		nextID=2650;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1063.7083,433.60187,4717.6006};
-		dir[]={-0.74702293,-0.59446746,-0.29762208};
-		up[]={-0.55229241,0.80408752,-0.22003952};
-		aside[]={-0.37012064,2.3422763e-007,0.92899215};
+		pos[]={978.20203,425.72992,4721.7017};
+		dir[]={-0.15077771,-0.83051807,0.53622431};
+		up[]={-0.22480902,0.55699062,0.79951012};
+		aside[]={0.96267903,4.3422915e-007,0.27068987};
 	};
 };
 binarizationWanted=0;
@@ -116,7 +116,8 @@ addons[]=
 	"A3_Structures_F_Items_Tools",
 	"A3_Air_F_Orange_UAV_01",
 	"CUP_Editor_Signs_Config",
-	"A3_Structures_F_Bootcamp_Civ_SportsGrounds"
+	"A3_Structures_F_Bootcamp_Civ_SportsGrounds",
+	"A3_Structures_F_Civ_Lamps"
 };
 class AddonsMetaData
 {
@@ -7335,7 +7336,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=841;
+		items=842;
 		class Item0
 		{
 			dataType="Layer";
@@ -39660,6 +39661,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item841
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={976.78064,402.27957,4730.4229};
+				angles[]={0,2.5495102,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=2649;
+			type="Land_LampDecor_F";
 		};
 	};
 	class Connections

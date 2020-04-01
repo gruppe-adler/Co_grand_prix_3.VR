@@ -28,7 +28,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
     _camera camSetTarget camTarget_01;
     _camera camCommit 0;
     _camera camSetPos (getPos camPos_02);
-    _camera camCommit 30;
+    _camera camCommit 120;
 
     showCinemaBorder true;
 
