@@ -108,7 +108,7 @@ class CfgSounds {
 class Loadouts {
     baseDelay = 1;
     handleRadios = 1;
-    resetLoadout = 0;
+    resetLoadout = 1;
 
     #include "USER\customGear.hpp"
 

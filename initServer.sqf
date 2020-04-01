@@ -21,7 +21,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 ["grad_grandPrix_race_driversUp", {
 	params ["_unit"];
 	if (Grad_grandPrix_race_drivers isEqualTo []) then {
-		Grad_grandPrix_race_drivers = [group _unit, 1];
+		Grad_grandPrix_race_drivers = [group _unit, 1, [_unit]];
 	} else {
 		Grad_grandPrix_race_drivers params ["_group", "_count", "_units"];
 		private _index = _units pushBackUnique _unit;
@@ -193,4 +193,10 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 	private _message = format ["Endzeit ohne Strafzeit: %1", _formatedTime];
 	[_message, false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", _group];
 
+}] call CBA_fnc_addEventHandler;
+
+["grad_grandPrix_intro_playAnsage", {
+	{
+		playSound3D [MISSION_ROOT + "data\KnastAnsage.ogg", _x];
+	}forEach [speaker_1, speaker_2, speaker_3, speaker_4];
 }] call CBA_fnc_addEventHandler;

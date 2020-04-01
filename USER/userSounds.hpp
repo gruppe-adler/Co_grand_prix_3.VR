@@ -31,3 +31,9 @@ class jumpTPSound
 	titles[] = {};
 };
 
+class knastAnsage
+{
+	name	= "knastAnsage";
+	sound[]	= {"\data\KnastAnsage.ogg", db + 0, 1.0 };
+	titles[] = {};
+};

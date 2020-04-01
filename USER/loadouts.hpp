@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "";
+loadoutFactionBlu = "grandPrix";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 

@@ -36,6 +36,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
     [{
         params ["_camera"];
 
+        ["grad_grandPrix_intro_playAnsage", []] call CBA_fnc_serverEvent;
 
         [{
             params ["_camera"];
@@ -72,7 +73,9 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                         2 fadeMusic 0;
                         STHud_UIMode = 1;
                         diwako_dui_main_toggled_off = false;
+
                         ["grad_grandPrix_intro_mainHall_open", []] call CBA_fnc_serverEvent;
+                        ["grad_grandPrix_intro_yardGate2_open", []] call CBA_fnc_serverEvent;
 
                         [{
                             playMusic "";
@@ -81,6 +84,6 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                     }, [], 2] call CBA_fnc_waitAndExecute;
                 }, [], 0.4] call CBA_fnc_waitAndExecute;w
             }, _this, 0.2] call CBA_fnc_waitAndExecute;
-        }, _this, 16.7] call CBA_fnc_waitAndExecute;
-    }, [_camera, _filmgrain], 5] call CBA_fnc_waitAndExecute;
+        }, _this, 4.7] call CBA_fnc_waitAndExecute;
+    }, [_camera, _filmgrain], 17] call CBA_fnc_waitAndExecute;
 }, [], 3] call CBA_fnc_waitAndExecute;

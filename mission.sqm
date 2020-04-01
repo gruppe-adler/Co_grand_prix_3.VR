@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2679;
+		nextID=2693;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4597.2241,69.347427,287.07108};
-		dir[]={0.42133483,-0.74232751,0.52109605};
-		up[]={0.46674636,0.67000425,0.57726026};
-		aside[]={0.77765816,-4.9763185e-007,-0.62877578};
+		pos[]={4642.165,17.494877,349.11154};
+		dir[]={0.10551268,-0.51994407,-0.84766406};
+		up[]={0.064232856,0.85415947,-0.51602697};
+		aside[]={-0.99234462,1.0754593e-007,-0.12352273};
 	};
 };
 binarizationWanted=0;
@@ -2701,7 +2701,7 @@ class CustomAttributes
 																"BOOL"
 															};
 														};
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -2712,7 +2712,7 @@ class CustomAttributes
 														{
 															type[]=
 															{
-																"BOOL"
+																"SCALAR"
 															};
 														};
 														value=1;
@@ -7338,7 +7338,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=854;
+		items=859;
 		class Item0
 		{
 			dataType="Layer";
@@ -31892,7 +31892,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4513.5879,11.983871,341.58386};
-			angle=1.789608;
+			angle=1.7896076;
 			class Attributes
 			{
 				name="trigger_5";
@@ -40109,6 +40109,155 @@ class Mission
 			colorName="ColorWEST";
 			id=2662;
 			atlOffset=-0.00062561035;
+		};
+		class Item854
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4615.7832,12.092933,313.17319};
+						angles[]={0,6.2768145,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{this disableAI ""MOVE"";}";
+					};
+					id=2679;
+					type="B_RangeMaster_F";
+					atlOffset=0.11149406;
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4617.208,12.092932,312.79147};
+						angles[]={0,0.11299185,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this disableAI ""MOVE"";}";
+					};
+					id=2680;
+					type="B_RangeMaster_F";
+					atlOffset=0.11149311;
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4620.0376,12.092929,312.14761};
+						angles[]={0,0.21362706,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this disableAI ""MOVE"";}";
+					};
+					id=2681;
+					type="B_RangeMaster_F";
+					atlOffset=0.11149025;
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4618.5669,12.092931,312.52371};
+						angles[]={0,0.20220841,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{this disableAI ""MOVE"";}";
+					};
+					id=2685;
+					type="B_RangeMaster_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2682;
+			atlOffset=0.11149406;
+		};
+		class Item855
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4642.3618,17.243999,357.23401};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="speaker_1";
+			};
+			id=2686;
+			type="HeliHEmpty";
+			atlOffset=1.5744619;
+		};
+		class Item856
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4608.6323,17.508369,364.10947};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="speaker_2";
+			};
+			id=2690;
+			type="HeliHEmpty";
+			atlOffset=1.8388319;
+		};
+		class Item857
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4606.1504,17.243999,357.17181};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="speaker_3";
+			};
+			id=2691;
+			type="HeliHEmpty";
+			atlOffset=1.5744619;
+		};
+		class Item858
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4640.6602,17.243999,348.84};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="speaker_4";
+			};
+			id=2692;
+			type="HeliHEmpty";
+			atlOffset=1.5180635;
 		};
 	};
 	class Connections
