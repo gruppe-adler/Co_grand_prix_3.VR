@@ -20,6 +20,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 
 ["grad_grandPrix_race_driversUp", {
 	params ["_unit"];
+
 	if (Grad_grandPrix_race_drivers isEqualTo []) then {
 		Grad_grandPrix_race_drivers = [group _unit, 1, [_unit]];
 	} else {

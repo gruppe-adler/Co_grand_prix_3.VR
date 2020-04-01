@@ -84,6 +84,6 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                     }, [], 2] call CBA_fnc_waitAndExecute;
                 }, [], 0.4] call CBA_fnc_waitAndExecute;w
             }, _this, 0.2] call CBA_fnc_waitAndExecute;
-        }, _this, 4.7] call CBA_fnc_waitAndExecute;
-    }, [_camera, _filmgrain], 17] call CBA_fnc_waitAndExecute;
+        }, _this, 5.7] call CBA_fnc_waitAndExecute;
+    }, [_camera, _filmgrain], 16] call CBA_fnc_waitAndExecute;
 }, [], 3] call CBA_fnc_waitAndExecute;

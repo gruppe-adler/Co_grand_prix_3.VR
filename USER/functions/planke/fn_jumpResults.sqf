@@ -12,3 +12,10 @@ _structured pushBack "<t align='center'>------------------------------------</t>
 _structured pushBack format ["<t align='left' font='EtelkaMonospacePro'>%1</t><t align='right' font='EtelkaMonospacePro'>%2</t>", _pullHight, _distance]; 
 
 hintSilent parseText (_structured joinString "<br />");
+
+5 fadeMusic 0;
+
+[{
+	playMusic "";
+	1 fadeMusic 1;
+}, [], 6] call CBA_fnc_waitAndExecute;

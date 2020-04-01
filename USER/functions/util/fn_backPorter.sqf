@@ -1,9 +1,9 @@
 params ["_obj", "_portTarget"];
 
-_portTarget getVariable ["grandPrix_porttarget", _portTarget];
+_obj setVariable ["grandPrix_portTarget", _portTarget];
 
 private _action = [
-	"teleport_1", 
+	format ["teleport_1_%1", _obj], 
 	"Teleport", 
 	"", 
 	{
@@ -12,10 +12,10 @@ private _action = [
 		[{
 			params ["_unit", "_target"];
 
-			private _portTarget = _target getVariable "grandPrix_porttarget";
+			private _portTarget = _target getVariable "grandPrix_portTarget";
 
 			playSound "jumpTPSound";
-			_unit setPos ((getPosATL _portTarget) vectorAdd [(random 6) -4, (random 6) -4, 0]);
+			_unit setPos ((getPosATL _portTarget) vectorAdd [(random 6) -4, (random 6) -4, 1]);
 			
 			cutText ["", "BLACK IN", 3];
 		},[_player, _target], 0.3] call CBA_fnc_waitAndExecute;
