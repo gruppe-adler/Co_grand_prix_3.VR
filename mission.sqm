@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1005;
+		nextID=1049;
 	};
 	class Camera
 	{
-		pos[]={3675.228,99.145912,3686.9753};
-		dir[]={-0.04114059,-0.47616488,0.87839645};
-		up[]={-0.022277243,0.87935585,0.47564358};
-		aside[]={0.99890697,8.1181497e-008,0.046784543};
+		pos[]={4519.9526,113.69097,247.63268};
+		dir[]={-0.1352355,-0.65981811,0.73915732};
+		up[]={-0.11874866,0.75142533,0.64904511};
+		aside[]={0.9836728,6.7520887e-009,0.17997187};
 	};
 };
 binarizationWanted=0;
@@ -20220,7 +20220,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_1";
-				condition="call{this}";
+				condition="call{this && player in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_startTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=5;
 				sizeB=10;
@@ -20252,11 +20252,11 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7097.75,97.879585,3841.313};
-			angle=6.0946198;
+			angle=6.0946202;
 			class Attributes
 			{
 				name="trigger_2";
-				condition="call{this}";
+				condition="call{this && player in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_stopTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=10;
 				sizeB=20;
@@ -20475,7 +20475,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_3";
-				condition="call{this}";
+				condition="call{this && player in thisList}";
 				onActivation="call{{" \n "if (local _x && isPlayer _x) then {" \n "[_x] call grad_grandPrix_fnc_addJumpEHs;" \n "};" \n "} forEach thisList;}";
 				sizeA=500;
 				sizeB=700;
@@ -20495,7 +20495,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_4";
-				condition="call{this}";
+				condition="call{this && player in thisList}";
 				onActivation="call{{" \n "if (local _x && isPlayer _x) then {" \n "[_x] call grad_grandPrix_fnc_portToCarrier;" \n "};" \n "} forEach thisList;}";
 				sizeA=4;
 				sizeB=5;
@@ -31893,13 +31893,13 @@ class Mission
 		class Item556
 		{
 			dataType="Trigger";
-			position[]={4513.5879,11.983871,341.58386};
-			angle=1.7896074;
+			position[]={4513.5879,11.984,341.58401};
+			angle=1.7896081;
 			class Attributes
 			{
 				name="trigger_5";
-				condition="call{this}";
-				onActivation="call{{ " \n "if (local _x && {isNil ""grandPrix_introMusik""}) then {" \n "[""grad_grandPrix_startGroupTimer"", [group _x]] call CBA_fnc_serverEvent; " \n "_x allowDamage false;" \n "grandPrix_introMusik = true;" \n "0 fadeMusic 1; " \n "playMusic [""queen"",25]; " \n "}; " \n "} forEach thisList;}";
+				condition="call{this && player in thisList}";
+				onActivation="call{{ " \n "[""grad_grandPrix_startGroupTimer"", [group _x]] call CBA_fnc_serverEvent; " \n "_x allowDamage false;" \n "0 fadeMusic 1; " \n "playMusic [""queen"",25]; " \n "} forEach thisList;}";
 				sizeA=10;
 				sizeB=20;
 				sizeC=10;
@@ -31909,7 +31909,7 @@ class Mission
 			};
 			id=2299;
 			type="EmptyDetectorAreaR50";
-			atlOffset=9.5367432e-007;
+			atlOffset=0.00012969971;
 		};
 		class Item557
 		{
@@ -33408,7 +33408,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_6";
-				condition="call{this}";
+				condition="call{this && player in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[""grad_grandPrix_stopGroupTimer"", [group(driver _x)]] call CBA_fnc_serverEvent;" \n "};" \n "} forEach thisList;}";
 				sizeA=20;
 				sizeB=10;
