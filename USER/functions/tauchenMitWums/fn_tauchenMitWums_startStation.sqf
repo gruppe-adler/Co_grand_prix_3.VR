@@ -39,7 +39,7 @@ private _allExplosives = [];
 					},{
 			params ["_explosivesClass", "_station", "_playerGroup", "_allExplosives"];
 
-			private _time = serverTime + 300;
+			private _time = serverTime + 420;
 			private _id = [] call grad_grandPrix_fnc_startTimer;
 
 			{
