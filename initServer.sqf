@@ -145,7 +145,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 ["grad_grandPrix_intro_innerGate_close", {
 	if (grad_grandPrix_intro_innerGate animationSourcePhase "Zeroanimation" < 12) exitWith {};
 
-	grad_grandPrix_intro_innerGate animateSource ["Zeroanimation", 12];
+	grad_grandPrix_intro_innerGate animateSource ["Zeroanimation", 0];
 }] call CBA_fnc_addEventHandler;
 
 ["grad_grandPrix_intro_yardGate1_open", {
