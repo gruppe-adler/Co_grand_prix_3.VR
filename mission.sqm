@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2643;
+		nextID=2644;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1051.9835,426.19876,4712.3677};
-		dir[]={-0.88715082,-0.45449585,0.081534944};
-		up[]={-0.45284179,0.89061338,0.041618101};
-		aside[]={0.091541708,4.2840838e-008,0.99592048};
+		pos[]={1027.7655,433.60187,4708.9038};
+		dir[]={-0.90383005,-0.4273949,-0.020682434};
+		up[]={-0.42733091,0.90404159,-0.0097786952};
+		aside[]={-0.022876978,-1.4761463e-007,0.99973947};
 	};
 };
 binarizationWanted=0;
@@ -115,7 +115,8 @@ addons[]=
 	"A3_Structures_F_Orange_Signs_Mines",
 	"A3_Structures_F_Items_Tools",
 	"A3_Air_F_Orange_UAV_01",
-	"CUP_Editor_Signs_Config"
+	"CUP_Editor_Signs_Config",
+	"A3_Structures_F_Bootcamp_Civ_SportsGrounds"
 };
 class AddonsMetaData
 {
@@ -7334,7 +7335,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=840;
+		items=841;
 		class Item0
 		{
 			dataType="Layer";
@@ -39595,6 +39596,46 @@ class Mission
 			};
 			id=2642;
 			type="CUP_sign_parking_new";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item840
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={975.22107,400.42554,4713.1831};
+				angles[]={-0,4.7035322,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2643;
+			type="Land_WinnersPodium_01_F";
 			class CustomAttributes
 			{
 				class Attribute0
