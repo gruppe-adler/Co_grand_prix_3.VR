@@ -36,9 +36,11 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 
 		{
 			// Current result is saved in variable _x
+			[_x, false] remoteExec ["allowDamage", _x];
 			private _position = getPosATL tauchenMitWumsTeleportPosition;
 			_x setPosATL _position;
 			[_x] call GRAD_Loadout_fnc_doLoadoutForUnit;
+			[_x, "AmovPercMstpSnonWnonDnon_AwopPercMstpSoptWbinDnon_end"] remoteExec ["switchMove", _x];
 		} forEach (units _playerGroup);
 
 		["ace_explosives_defuse", _eventHandlerID] call CBA_fnc_removeEventHandler;

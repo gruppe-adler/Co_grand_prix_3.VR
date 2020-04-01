@@ -59,9 +59,9 @@ private _allExplosives = [];
 				params ["_explosive", "_unit"];
 				_thisArgs params ["_playerGroup", "_station"];
 				_unit = getPos _unit;
+				_station setVariable ["defusedExplosives",((_station getVariable "defusedExplosives") + 1), true];
 				{
 					// Current result is saved in variable _x
-					_station setVariable ["defusedExplosives",((_station getVariable "defusedExplosives") + 1), true];
 					[format["%1 von 5 Sprengladungen entschärft", _station getVariable "defusedExplosives"]] remoteExec ["systemChat", _x];
 				} forEach (units _playerGroup);
 

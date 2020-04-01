@@ -16,7 +16,7 @@ private _action = [
 	"Stop Mortar Stage", 
 	"", 
 	{
-		private _distance = missionNamespace getVariable ["GRAD_GRANDPRIX_LASTSHOTRESULT", [600]] select 0;
+		private _distance = missionNamespace getVariable ["GRAD_GRANDPRIX_LASTSHOTRESULT", [600, 0, 0]] select 0;
 		private _strafe = [(Grad_grandPrix_mortar_shoots *5) + _distance] call grad_grandPrix_fnc_formatTime;
         private _message = format ["Stage stopped!<br /> Shots fired: %1<br /> Range to Target: %2 <br /> %3 Strafzeit hinzugefügt", Grad_grandPrix_mortar_shoots, _distance, _strafe];
 		[_message, false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _player];
