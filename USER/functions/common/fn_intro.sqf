@@ -28,15 +28,14 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
     _camera camSetTarget camTarget_01;
     _camera camCommit 0;
     _camera camSetPos (getPos camPos_02);
-    _camera camCommit 120;
+    _camera camCommit 30;
 
     showCinemaBorder true;
 
     cutText ["", "BLACK IN", 1];
     [{
         params ["_camera"];
-        _camera camSetFov 0.1;
-        _camera camCommit 30;
+
 
         [{
             params ["_camera"];

@@ -1,3 +1,4 @@
+
 if !(isServer) exitWith {
 	[] remoteExecCall ["grad_grandPrix_fnc_addTime", 2];
 };
@@ -5,7 +6,8 @@ if !(isServer) exitWith {
 private _groups = [];
 
 {
-	if (isPlayer _x && {isNull (getAssignedCuratorLogic _x)}) then {
+	//if (isPlayer _x && {isNull (getAssignedCuratorLogic _x)}) then {
+	if (isPlayer _x) then {
 		_groups pushBackUnique (group _x);
 	};
 }forEach (playableUnits + switchableUnits);
@@ -13,7 +15,7 @@ private _groups = [];
 private _groupsArray = [];
 
 {
-	private _stationTimes = missionNamespace getVariable [format ["grad_grandPrix_times_%1", _x], []];
+	private _stationTimes = missionNamespace getVariable [format ["grad_grandPrix_times_%1", _x], [0]];
 	_stationTimes pushBack _x;
 	_groupsArray pushBackUnique _stationTimes;
 }forEach _groups;

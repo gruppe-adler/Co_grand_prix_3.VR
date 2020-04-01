@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2663;
+		nextID=2679;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=961;
+		nextID=983;
 	};
 	class Camera
 	{
-		pos[]={3557.3306,20.205589,1911.9923};
-		dir[]={-0.0059307106,-0.29400888,0.95580518};
-		up[]={-0.001824647,0.95579821,0.29401383};
-		aside[]={0.99999839,2.1854794e-007,0.0062054722};
+		pos[]={4597.2241,69.347427,287.07108};
+		dir[]={0.42133483,-0.74232751,0.52109605};
+		up[]={0.46674636,0.67000425,0.57726026};
+		aside[]={0.77765816,-4.9763185e-007,-0.62877578};
 	};
 };
 binarizationWanted=0;
@@ -7314,8 +7314,9 @@ class Mission
 	class Intel
 	{
 		resistanceWest=0;
-		timeOfChanges=10800;
-		startWeather=0.69975221;
+		timeOfChanges=5400;
+		startWeather=0.3424488;
+		startFog=0.029659193;
 		startWind=0.30024734;
 		startWindDir=260;
 		startWaves=0.1;
@@ -20213,10 +20214,11 @@ class Mission
 		class Item299
 		{
 			dataType="Trigger";
-			position[]={5574.4072,233.34023,3950.4763};
+			position[]={5574.4072,233.33983,3950.4761};
 			angle=0.31415927;
 			class Attributes
 			{
+				name="trigger_1";
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_startTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=5;
@@ -20229,7 +20231,7 @@ class Mission
 			};
 			id=1843;
 			type="EmptyDetectorAreaR50";
-			atlOffset=0.13145447;
+			atlOffset=0.1309967;
 		};
 		class Item300
 		{
@@ -20248,10 +20250,11 @@ class Mission
 		class Item301
 		{
 			dataType="Trigger";
-			position[]={7097.75,97.879929,3841.3132};
+			position[]={7097.75,97.879585,3841.313};
 			angle=6.0946198;
 			class Attributes
 			{
+				name="trigger_2";
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_stopTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=10;
@@ -20263,7 +20266,7 @@ class Mission
 			};
 			id=1845;
 			type="EmptyDetector";
-			atlOffset=-0.61165619;
+			atlOffset=-0.61199951;
 		};
 		class Item302
 		{
@@ -20467,21 +20470,22 @@ class Mission
 		class Item309
 		{
 			dataType="Trigger";
-			position[]={6485.4458,11203.289,4654.4238};
+			position[]={6485.4458,10967.631,4654.4238};
 			class Attributes
 			{
+				name="trigger_3";
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x && isPlayer _x) then {" \n "[_x] call grad_grandPrix_fnc_addJumpEHs;" \n "};" \n "} forEach thisList;}";
-				sizeA=150;
-				sizeB=300;
-				sizeC=70;
+				sizeA=500;
+				sizeB=700;
+				sizeC=300;
 				repeatable=1;
 				activationBy="WEST";
 				isRectangle=1;
 			};
 			id=1855;
 			type="EmptyDetector";
-			atlOffset=10922.098;
+			atlOffset=10686.439;
 		};
 		class Item310
 		{
@@ -20489,6 +20493,7 @@ class Mission
 			position[]={2237.1951,203.147,2190.1211};
 			class Attributes
 			{
+				name="trigger_4";
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x && isPlayer _x) then {" \n "[_x] call grad_grandPrix_fnc_portToCarrier;" \n "};" \n "} forEach thisList;}";
 				sizeA=4;
@@ -30612,7 +30617,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4509.3125,1.3881395,449.5267};
+				position[]={4509.9019,1.3881395,449.56009};
 				angles[]={0,1.1875395,0};
 			};
 			side="Empty";
@@ -30621,7 +30626,7 @@ class Mission
 			};
 			id=2277;
 			type="C_Scooter_Transport_01_F";
-			atlOffset=11.457158;
+			atlOffset=11.501366;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30670,7 +30675,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4508.5488,1.3878658,451.565};
+				position[]={4509.0298,1.3881395,451.80255};
 				angles[]={0,1.1875395,0};
 			};
 			side="Empty";
@@ -30679,7 +30684,7 @@ class Mission
 			};
 			id=2278;
 			type="C_Scooter_Transport_01_F";
-			atlOffset=11.573001;
+			atlOffset=11.610253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -31886,22 +31891,22 @@ class Mission
 		class Item556
 		{
 			dataType="Trigger";
-			position[]={4523.1431,13.781191,339.10699};
-			angle=1.7896074;
+			position[]={4513.5879,11.983871,341.58386};
+			angle=1.789608;
 			class Attributes
 			{
+				name="trigger_5";
 				condition="call{this}";
 				onActivation="call{{ " \n "if (local _x && {isNil ""grandPrix_introMusik""}) then {" \n "[""grad_grandPrix_startGroupTimer"", [group _x]] call CBA_fnc_serverEvent; " \n "_x allowDamage false;" \n "grandPrix_introMusik = true;" \n "0 fadeMusic 1; " \n "playMusic [""queen"",25]; " \n "}; " \n "} forEach thisList;}";
 				sizeA=10;
-				sizeB=10;
-				sizeC=5;
+				sizeB=20;
+				sizeC=10;
 				repeatable=1;
 				activationBy="WEST";
 				isRectangle=1;
 			};
 			id=2299;
 			type="EmptyDetectorAreaR50";
-			atlOffset=1.7973204;
 		};
 		class Item557
 		{
@@ -33388,6 +33393,7 @@ class Mission
 			position[]={1079.54,394.69208,4714.7432};
 			class Attributes
 			{
+				name="trigger_6";
 				condition="call{this}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[""grad_grandPrix_stopGroupTimer"", [group(driver _x)]] call CBA_fnc_serverEvent;" \n "};" \n "} forEach thisList;}";
 				sizeA=20;

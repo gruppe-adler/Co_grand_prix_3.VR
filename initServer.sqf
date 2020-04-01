@@ -104,7 +104,7 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 				_best params ["_unit", "_pullHeight", "_distance"];
 
 				private _time = (floor(_pullHeight*0.1)) + (floor(_distance));
-				private _strafe = [_time] call grad_grandPrix_fnc_formatTime;
+				private _strafe = [_time, "MM:SS"] call BIS_fnc_secondsToString;
 
 				private _message = format ["%1 Strafzeit hinzugefügt", _strafe];
 				[_message, false] remoteExecCall ["grad_grandPrix_fnc_mortarMessage", group _unit];
@@ -128,6 +128,8 @@ grad_grandPrix_intro_mainHall = _objects select 1;
 	if (grad_grandPrix_intro_outerGate animationSourcePhase "Zeroanimation" > 0) exitWith {};
 
 	grad_grandPrix_intro_outerGate animateSource ["Zeroanimation", 5];
+
+	//playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", player];
 }] call CBA_fnc_addEventHandler;
 
 ["grad_grandPrix_intro_outerGate_close", {
