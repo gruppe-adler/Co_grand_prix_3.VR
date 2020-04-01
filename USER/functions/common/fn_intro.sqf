@@ -59,7 +59,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                 ["Default", 0, false] call BIS_fnc_setPPeffectTemplate;
 
                 [{
-                    cutText ["", "BLACK IN", 1];
+                    cutText ["", "BLACK IN", 0.5];
                     [ace_player, "amovpercmstpslowwrfldnon", 1] call ace_common_fnc_doAnimation;
 
                     [{
@@ -80,7 +80,7 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                             0 fadeMusic 1;
                         }, [], 4] call CBA_fnc_waitAndExecute;
                     }, [], 2] call CBA_fnc_waitAndExecute;
-                }, [], 2] call CBA_fnc_waitAndExecute;w
+                }, [], 0.4] call CBA_fnc_waitAndExecute;w
             }, _this, 0.2] call CBA_fnc_waitAndExecute;
         }, _this, 16.7] call CBA_fnc_waitAndExecute;
     }, [_camera, _filmgrain], 5] call CBA_fnc_waitAndExecute;
