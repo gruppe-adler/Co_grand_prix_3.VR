@@ -12,7 +12,7 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 [{
 	params ["_allExplosives", "_station", "", "_time", "", "", ""];
 
-	(((_station getVariable ["defusedExplosives", 0]) isEqualTo 5) || {serverTime >= _time})
+	(((_station getVariable ["defusedExplosives", 0]) >= 5) || {serverTime >= _time})
 },{
 	params ["_allExplosives", "_station", "_playerGroup", "_time", "_id", "_explosivesClass", "_eventHandlerID"];
 
@@ -20,7 +20,7 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 	private _defusedExplosives = _station getVariable ["defusedExplosives", 0];
 	private _amountMinesLeft = 5 - _defusedExplosives;
 
-	if !(_defusedExplosives isEqualTo 5) then {
+	if !(_defusedExplosives >= 5) then {
 		[_playerGroup, "Tauchen mit Wums", (_amountMinesLeft * 30) + _stationDuration] call grad_grandPrix_fnc_addTime;
 	} else {
 		[_playerGroup, "Tauchen mit Wums", _stationDuration] call grad_grandPrix_fnc_addTime;
