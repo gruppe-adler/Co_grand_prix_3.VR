@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1049;
+		nextID=1071;
 	};
 	class Camera
 	{
-		pos[]={4519.9526,113.69097,247.63268};
+		pos[]={4550.167,193.78813,202.66792};
 		dir[]={-0.1352355,-0.65981811,0.73915732};
 		up[]={-0.11874866,0.75142533,0.64904511};
 		aside[]={0.9836728,6.7520887e-009,0.17997187};
@@ -7641,13 +7641,13 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={-535.1792,4.9526634,471.95566};
+						position[]={4538.2324,33.759315,282.96021};
 					};
 					name="virtualZeus1";
 					isPlayable=1;
 					id=29;
 					type="VirtualCurator_F";
-					atlOffset=24.752663;
+					atlOffset=21.779316;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7694,13 +7694,13 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={-535.44434,4.9526634,371.35654};
+						position[]={4570.4844,25.577295,268.67157};
 					};
 					name="virtualZeus2";
 					isPlayable=1;
 					id=30;
 					type="VirtualCurator_F";
-					atlOffset=24.752663;
+					atlOffset=13.597296;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7747,13 +7747,13 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={-534.91504,4.9526634,271.55185};
+						position[]={4598.2456,16.688377,263.36426};
 					};
 					name="virtualZeus3";
 					isPlayable=1;
 					id=31;
 					type="VirtualCurator_F";
-					atlOffset=24.752663;
+					atlOffset=4.7083778;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8538,7 +8538,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=16.088165;
+			atlOffset=16.145294;
 		};
 		class Item2
 		{
@@ -20220,7 +20220,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_1";
-				condition="call{this && player in thisList}";
+				condition="call{this && (vehicle player) in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_startTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=5;
 				sizeB=10;
@@ -20252,11 +20252,11 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7097.75,97.879585,3841.313};
-			angle=6.0946202;
+			angle=6.0946198;
 			class Attributes
 			{
 				name="trigger_2";
-				condition="call{this && player in thisList}";
+				condition="call{this && (vehicle player) in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[_x] call grad_grandPrix_fnc_stopTimeRecording;" \n "};" \n "} forEach thisList;}";
 				sizeA=10;
 				sizeB=20;
@@ -31894,7 +31894,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={4513.5879,11.984,341.58401};
-			angle=1.7896081;
+			angle=1.7896079;
 			class Attributes
 			{
 				name="trigger_5";
@@ -33408,7 +33408,7 @@ class Mission
 			class Attributes
 			{
 				name="trigger_6";
-				condition="call{this && player in thisList}";
+				condition="call{this && (vehicle player) in thisList}";
 				onActivation="call{{" \n "if (local _x) then {" \n "[""grad_grandPrix_stopGroupTimer"", [group(driver _x)]] call CBA_fnc_serverEvent;" \n "};" \n "} forEach thisList;}";
 				sizeA=20;
 				sizeB=10;
@@ -40262,7 +40262,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4640.6602,17.243999,348.84};
+				position[]={4623.9546,17.333092,356.02341};
 			};
 			side="Empty";
 			class Attributes
@@ -40271,7 +40271,7 @@ class Mission
 			};
 			id=2692;
 			type="HeliHEmpty";
-			atlOffset=1.5180635;
+			atlOffset=4.8988457;
 		};
 		class Item855
 		{

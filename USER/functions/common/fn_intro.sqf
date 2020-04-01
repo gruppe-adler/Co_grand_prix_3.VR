@@ -81,9 +81,9 @@ ace_player switchMove "amovpercmstpslowwrfldnon";
                             playMusic "";
                             0 fadeMusic 1;
                         }, [], 4] call CBA_fnc_waitAndExecute;
-                    }, [], 2] call CBA_fnc_waitAndExecute;
+                    }, [], 8] call CBA_fnc_waitAndExecute;
                 }, [], 0.4] call CBA_fnc_waitAndExecute;w
             }, _this, 0.2] call CBA_fnc_waitAndExecute;
-        }, _this, 5.7] call CBA_fnc_waitAndExecute;
-    }, [_camera, _filmgrain], 16] call CBA_fnc_waitAndExecute;
+        }, _this, 1.7] call CBA_fnc_waitAndExecute;
+    }, [_camera, _filmgrain], 20] call CBA_fnc_waitAndExecute;
 }, [], 3] call CBA_fnc_waitAndExecute;
