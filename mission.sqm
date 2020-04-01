@@ -8,15 +8,15 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2662;
+		nextID=2663;
 	};
 	class MarkerIDProvider
 	{
-		nextID=17;
+		nextID=18;
 	};
 	class LayerIndexProvider
 	{
-		nextID=939;
+		nextID=961;
 	};
 	class Camera
 	{
@@ -7337,7 +7337,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=853;
+		items=854;
 		class Item0
 		{
 			dataType="Layer";
@@ -40083,7 +40083,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1055.4307,399.97897,4681.4268};
-				angles[]={-0,4.7051287,0.0053265258};
+				angles[]={0,4.7051287,0.0053265258};
 			};
 			side="Empty";
 			flags=4;
@@ -40092,6 +40092,17 @@ class Mission
 			};
 			id=2661;
 			type="Land_ConcreteKerb_03_BW_short_F";
+		};
+		class Item853
+		{
+			dataType="Marker";
+			position[]={715.52502,157.528,5705.4258};
+			name="marker_17";
+			text="Gottes Finger";
+			type="mil_objective";
+			colorName="ColorWEST";
+			id=2662;
+			atlOffset=-0.00062561035;
 		};
 	};
 	class Connections
