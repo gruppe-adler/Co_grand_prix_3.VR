@@ -36,16 +36,18 @@ grad_grandPrix_tauchen_defusedExplosives = [];
 
 		{
 			// Current result is saved in variable _x
-			private _position = (getPosASL tauchenMitWumsTeleportPosition) vectorAdd [0, 0, 1];
-			_x setPosASL _position;
+			private _position = getPosATL tauchenMitWumsTeleportPosition;
+			_x setPosATL _position;
+			[_x] call GRAD_Loadout_fnc_doLoadoutForUnit;
 		} forEach (units _playerGroup);
 
 		["ace_explosives_defuse", _eventHandlerID] call CBA_fnc_removeEventHandler;
 
+		private _unitsToMessage = (units _playerGroup) + [TauchenMitWums_Instructor];
 		if (_amountMinesLeft > 0) then {
-			[formatText["Ihr habt nur %1 von %2 Sprengladungen entschärft!%3Daher kommen insgesamt %4 Minuten auf euer Zeitkonto!", _defusedExplosives, 5, lineBreak, [(_amountMinesLeft * 30) + _stationDuration, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", units _playerGroup];
+			[formatText["Ihr habt nur %1 von %2 Sprengladungen entschärft!%3Daher kommen insgesamt %4 Minuten auf euer Zeitkonto!", _defusedExplosives, 5, lineBreak, [(_amountMinesLeft * 30) + _stationDuration, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", _unitsToMessage];
 		} else {
-			[formatText["Ihr habt die Station erfolgreich abgeschlossen!%1Es kommen %2 Minuten auf euer Zeitkonto.", lineBreak, [_stationDuration, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", units _playerGroup];
+			[formatText["Ihr habt die Station erfolgreich abgeschlossen!%1Es kommen %2 Minuten auf euer Zeitkonto.", lineBreak, [_stationDuration, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", _unitsToMessage];
 		};
 
 		{

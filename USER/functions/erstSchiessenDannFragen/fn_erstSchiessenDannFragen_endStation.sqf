@@ -7,6 +7,7 @@ params ["_station", "_playerGroup", "_allTargets"];
 	{
 		// Current result is saved in variable _x
 		_x setPosASL ((getPosASL ReaktionsschiessenStationPort) vectorAdd [(random 4) - 2, (random 4) - 2, 0]);
+		[_x] call GRAD_Loadout_fnc_doLoadoutForUnit;
 	} forEach (units _playerGroup);
 	
 	private _targetsHit = count(_station getVariable ["targetsHit", []]);
@@ -14,7 +15,7 @@ params ["_station", "_playerGroup", "_allTargets"];
 	private _penalty = (((count _allTargets - _targetsHit) * 5) + (_hostagesHit * 15));
 
 	[_playerGroup, "erst schiessen, dann fragen", _penalty] call grad_grandPrix_fnc_addTime;
-
+	private _unitsToMessage = (units _playerGroup) + [erstSchiessenDannFragen_Instructor];
 	[formatText["Ihr habt %1 von %2 Zielen, sowie %3 Zivilisten getroffen!%4Damit kommen %5 Minuten auf euer Zeitkonto!", _targetsHit, count _allTargets, _hostagesHit, lineBreak, [_penalty, "MM:SS"] call BIS_fnc_secondsToString]] remoteExec ["hint", units _playerGroup];
 
 	{

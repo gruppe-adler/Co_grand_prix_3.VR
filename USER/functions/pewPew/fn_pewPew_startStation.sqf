@@ -58,7 +58,6 @@ private _allPlayerHandlerIDs = [];
 		private _station = _unit getVariable "station";
 		private _shotsFired = _station getVariable ["shotsFired", 0];
 		_shotsFired = _shotsFired + 1;
-		hint "test";
 		_station setVariable ["shotsFired", _shotsFired, true];
 	}];
 

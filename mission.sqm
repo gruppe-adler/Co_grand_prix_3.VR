@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=983;
+		nextID=1005;
 	};
 	class Camera
 	{
-		pos[]={1483.6488,741.61304,4700.6748};
-		dir[]={0.3674652,-0.79282218,0.48624277};
-		up[]={0.47801006,0.60944802,0.6325193};
-		aside[]={0.79781729,-4.5425259e-007,-0.60292697};
+		pos[]={3675.228,99.145912,3686.9753};
+		dir[]={-0.04114059,-0.47616488,0.87839645};
+		up[]={-0.022277243,0.87935585,0.47564358};
+		aside[]={0.99890697,8.1181497e-008,0.046784543};
 	};
 };
 binarizationWanted=0;
@@ -31909,6 +31909,7 @@ class Mission
 			};
 			id=2299;
 			type="EmptyDetectorAreaR50";
+			atlOffset=9.5367432e-007;
 		};
 		class Item557
 		{
@@ -32774,20 +32775,41 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6792.624,115.86618,1689.182};
-						angles[]={0,3.6108053,0};
+						position[]={6792.624,115.86617,1689.182};
+						angles[]={0,3.6108069,0};
 					};
 					side="West";
 					flags=7;
 					class Attributes
 					{
 						init="call{this disableAI ""MOVE"";}";
+						name="erstSchiessenDannFragen_Instructor";
 					};
 					id=2337;
 					type="B_RangeMaster_F";
+					atlOffset=-7.6293945e-006;
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -32806,7 +32828,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -32814,6 +32855,7 @@ class Mission
 			{
 			};
 			id=2336;
+			atlOffset=-7.6293945e-006;
 		};
 		class Item583
 		{
@@ -32880,7 +32922,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3563.4109,4.3514385,1939.9456};
+						position[]={3563.4109,4.3514385,1939.946};
 						angles[]={0,4.996232,0};
 					};
 					side="West";
@@ -32888,12 +32930,32 @@ class Mission
 					class Attributes
 					{
 						init="call{this disableAI ""MOVE"";}";
+						name="TauchenMitWums_Instructor";
 					};
 					id=2341;
 					type="B_RangeMaster_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -32912,7 +32974,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute2
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
